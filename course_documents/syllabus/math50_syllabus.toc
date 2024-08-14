@@ -1,0 +1,4 @@
+\contentsline {section}{\tocsection {}{}{About the course}}{1}{section*.2}%
+\contentsline {section}{\tocsection {}{}{Course policies}}{1}{section*.3}%
+\contentsline {section}{\tocsection {}{}{Resources}}{2}{section*.4}%
+\contentsline {section}{\tocsection {}{}{Accessibility Needs}}{3}{section*.5}%

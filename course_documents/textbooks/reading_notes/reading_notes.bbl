@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{islp}
+Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, et~al.
+\newblock {\em An introduction to statistical learning (python version)},
+  volume 112.
+\newblock Springer, 2013.
+
+\bibitem{tabak}
+John Tabak.
+\newblock {\em Probability and statistics: The science of uncertainty}.
+\newblock Infobase Publishing, 2014.
+
+\bibitem{mehta2019high}
+Pankaj Mehta, Marin Bukov, Ching-Hao Wang, Alexandre~GR Day, Clint Richardson,
+  Charles~K Fisher, and David~J Schwab.
+\newblock A high-bias, low-variance introduction to machine learning for
+  physicists.
+\newblock {\em Physics reports}, 810:1--124, 2019.
+
+\end{thebibliography}
