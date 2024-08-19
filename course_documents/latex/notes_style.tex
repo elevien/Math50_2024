@@ -75,7 +75,7 @@
 \patchcmd{\subsection}{\normalfont}{\color{C5}}{}{}
 
 
-\newcommand{\dfn}[1]{{\bf  \color{blue}{#1}}}
+\newcommand{\dfn}[1]{{ \color{red}{\underline{#1}}}}
 
 
 \renewcommand{\FancyVerbFormatLine}[1]{\color{gray}{>\,\,#1}}
@@ -97,14 +97,15 @@
 
 
 \newtheoremstyle{example}
-{}                % Space above
-{}                % Space below
-{\color{red}\slshape}        % Theorem body font % (default is "\upshape")
-{}                % Indent amount
-{\bfseries}       % Theorem head font % (default is \mdseries)
-{.}               % Punctuation after theorem head % default: no punctuation
-{ }               % Space after theorem head
-{}                % Theorem head spec
+  {}                % Space above
+  {}                % Space below
+  {\color{C6}\slshape} % Theorem body font (default is "\upshape")
+  {}                % Indent amount
+  {\bfseries}       % Theorem head font (default is \mdseries)
+  {.}               % Punctuation after theorem head (default is no punctuation)
+  { }               % Space after theorem head
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ \textnormal{(#3)}}}  % Theorem head spec: #1 is name, #2 is number, #3 is note
+
 \theoremstyle{example}
 \newtheorem{example}{Example}
 
@@ -150,6 +151,9 @@
 
 
 %%%%%%%%%%%%%%%
+% adding space between items
+\usepackage{enumitem}
+\setlist{topsep=1.5em, itemsep=1.1em}
 
 
 

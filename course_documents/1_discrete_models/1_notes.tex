@@ -7,22 +7,6 @@
 \title{Discrete probability modeling and simulation}
 \maketitle
 
-\section{Reading}
-\begin{itemize}
-\item Read section 2.3 from \cite{islp}.
-\item Read sections 1.1,1.2,1.5.1,2.1 and 2.8 \cite{tabak}
-\end{itemize}
-
-\section{Learning objectives}
-
-\begin{itemize}
-\item Familiarity with basic concepts in probability (events, probability distribution, conditioning, means, variances)
-\item Basics of python programming (arrays, Dataframes, plotting)
-\item The concept of Monte Carlo simulation
-\end{itemize}
-
-
-
 
 \section{Statistical models}
 
@@ -33,49 +17,18 @@ There are many ways to represent models, but in science (and life), we often use
 \item The subject of this course is \dfn{regression models}\index{regression models}. We will define this precisely  later, but roughly speaking a regression model tells us how the distribution of a variable $y$ (the response variable) is related to another variable $x$ (the predictor). 
 \item Examples: Predicting height based on age, predicting the probability to get disease given a mutation
 \end{itemize}
-%
-%For example, you might be familiar with Newton's equation:
-%\begin{equation}\label{eq:fma}
-%F = ma
-%\end{equation}
-%which related the force ($F$) acceleration ($a$) and mass ($m$) of a particle. This a mathematical model of the motion of a  (non-relativistic) particle in a force field. While it isn't always true, it holds for such a wide range of applications that we call it a \emph{fundamental} law of nature, and it turns out to be extremely powerful. We can combine Newton's equation with other fundamental lows build models of more complicated systems involving many particles. For example, to build a model of planetary motion, we can combine Newton's equation with his other law of gravity, which states that the gravitation force between two objects of masses $m_1$ and $m_2$ a distance $r$ from each other is
-%\begin{equation}
-%F = G\frac{m_1m_2}{r^2}
-%\end{equation}
-%where $G$ is a constant.
-%We refer to these types of models -- that is, those which are built upon fundamental laws of nature -- as {\dfn mechanistic} models.
-%
-%In statistics, we are often interested in problems where nothing remotely close to a fundamental laws exist (yet). Instead, they are based directly on observations (data) or our intuitions. We will call these {\dfn phenomenological models}. Such models still be quite useful provided we are aware of their limitations. Of course, there is not sharp distinction between mechanistic and phenomenological models, but the distinction is helpful nonetheless. 
-%
-%
-%Often our models cannot make exact predictions about the value of a variable (this is true in both mechanistic and phenomenological models, but especially the latter). Instead, they only tell us the probability that a variable has a certain value, or falls within a range of values. 
-%
-%For example, if we were to construct a model of the $(y)$ of the height a randomly selected pine tree in New Hampshire as a function of its age $(x)$, we might begin by searching a relationship of the form
-%\begin{equation}
-%y = f(x)
-%\end{equation}
-%Such a model might be relevant for conservation efforts, since it would be important to understand how trees develop over time and influence their surrounding environment. 
-%However, if we take a {\dfn sample} of the population, meaning we go out and measure the height of some trees for which we know the age, we will quickly find that trees of the same age can have different heights.   This variation will be as result of many variables which are not in our model, e.g. the surrounding, the specific subspecies of pine, genetic variation within a subspecies to name just a few. In principle, we could construct a more complex model which includes, say, the DNA sequence of the tree ($g$):
-%\begin{equation}
-%y = f(x,g).
-%\end{equation}
-%This model would presumably have less variation. That is, if we collect a sample of trees for which we know the height and DNA sequence, we would find that the variation between trees with the same DNA and height is less than the variation between trees with only the same height. Yet variation will remain unless we include all the variables which effect tree height. However, it is not so useful to include these variables, since we can't actually measure most of them and many will have only a small influence on the tree height. One approach to dealing with these ``hidden" sources of variation is to define a {\dfn statistical model}, where $y$ is not the same for each tree of the same height, but is instead a {\dfn random variable}. On type of a statistical model is a regression model
-%\begin{equation}\label{eq:reg}
-%y = f(x) + \epsilon
-%\end{equation}
-%where $\epsilon$ is a random variable (usually one that is zero, on average). Models of this sort are the topic of this course. 
-%
+
 
 %--------------------------------------------------------------------------------------------------------------------------------
-\section{Discrete random variables and distributions}
+\section{Discrete random variables and distributions (\cite[Ch. 1 Sec. 2]{tabak})}
 
 \begin{itemize}
 \item The rigorous mathematical theory for random variables is very useful, but requires certain machinery which is beyond the scope of these notes. Fortunately, we go a long way without such formalism. For our purposes, we can pretty much think of a random variable as any variable which we cannot predict prior to an observation of it, regardless of how much information we have. The classic example is the flip of a coin. 
 \item The \dfn {sample space} is all the possible values that a random variable may take on. For the coin this found be heads or tails, for the roll dice $1,2,\dots,6$ for the dice and the height of a true is would any positive number.  Usually the outcomes are numbers, even if we use a number to represent a non-numerical quantity (e.g. someone's gender).
 \item  In probability theory one distinguishes between outcomes and \dfn{events} -- the latter are subsets of outcomes. For example, we might refer to the event that the roll of a die is grater than $2$. 
 %It's good to be aware of these definitions, but you don't need to memorize them.
-\item We can characterize a random variable using  a \dfn{probability model}\index{probability model} or \dfn{probability distribution}\index{probability distribution}, which maps a set of possible events to real numbers between 0 and 1. 
-\item  The \dfn{Bernoulli distribution} is probably the simplest probability distribution. It models a variable with binary outcome, for example the result of a YES/NO survey or a COVID test. 
+\item We can characterize a random variable using  a \dfn{probability model}\index{probability model} or \dfn{probability distribution}\index{probability distribution}, which maps a set of possible events to real numbers between 0 and 1 \cite[Definition 1.2.1]{tabak}. 
+\item  The \dfn{Bernoulli distribution} \cite[Example 2.3.2]{tabak} is probably the simplest probability distribution. It models a variable with binary outcome, for example the result of a YES/NO survey or a COVID test. 
 The probability distribution can be written as a piecewise function 
 \begin{equation}\label{eq:pmbern}
 P(Y=y) = \left\{\begin{array}{lr} q & y=0\\ (1-q) & y= 1 \end{array}\right.
@@ -89,9 +42,12 @@ In order to state that a Bernoulli distribution is a model for some random varia
 \begin{equation}
 Y \sim {\rm Bernoulli}(q).
 \end{equation}
-\item In general a probability distribution is a function that describes how likely certain outcomes are. 
 \item In general, if $Y$ is some random variable which could take ANY $y$, we define a probably distribution as a function from the space of all possible outcomes to an interval $[0,1]$. 
 \item For example,  the space of outcomes $S = \{\text{heads},\text{tails}\}$ or $S = \{1,2,3,4,5,6\}$ (a dice).  
+\end{itemize}
+
+\subsection{Properties of probability measures \cite[Ch 1. Sec. 1.2]{tabak}}
+\begin{itemize}
 \item There are some rules for such functions. 
 \begin{itemize}
 \item $P(U) \le 1$  for $U \subset S$
@@ -143,7 +99,7 @@ P_{A,B}(1,1) = P_A(1)P_B(1)  = \frac{1}{2} \times \frac{1}{2}
 
 
 
-\begin{example}(Geometric distribution)
+\begin{example}(\cite[Example 2.3.4]{tabak})
 Suppose we flip a fair coin until we see a heads. Let $Y$ be the number of flips until we see a heads. This is example of a  \dfn{geometric distribution}, which is the number of trials of independent, identically distributed (iid) Bernoulli random variables until we see $k$ successes. In more mathematical notation, if
 \begin{equation*}
 X_i \sim {\rm Bernoulli}(q), \quad i = 1,2,3,\dots
@@ -168,7 +124,7 @@ This has the expected properties of $Y$. In particular, it decays as $k$ increas
 \end{example}
 
 
-\item  More generally, for a distribution with a particular name and set of parameters, we will write 
+\item  In general, for a distribution with a particular name and set of parameters, we will write 
 \begin{equation*}
 {\rm Variable} \sim {\rm Distribution}({\rm parameters}).
 \end{equation*}
@@ -184,7 +140,7 @@ There are two different ways we can interpret a statement like: The probability 
 
 
 %--------------------------------------------------------------------------------------------------------------------------------
-\section{Python as a tool for statistical modeling}
+\section{Python as a tool for statistical modeling \cite[Sec. 2.3]{islp}}
 \begin{itemize}
 \item When we generate samples using a computer we call them \dfn {simulations}. We will use python to perform simulations, and it is therefore important to have a basic understanding of the python language. It is assumed that you will go through the separate python tutorial notebook. For convenience, we will cover some basic tasks in this \href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=_c4br6SCUtUy}{Notebook}
 \end{itemize}
@@ -295,14 +251,14 @@ and $25/64  \approx  0.39 \ne 1/2$.
 \end{example}
 \item When we have two variables we call $P(Y_A,Y_B)$ is an example of a \dfn{joint distribution}. It tells us the probabilities for observing \emph{both} variables together, e.g. observing a person with both mutations. In general, if $Y_1,\dots,Y_k$ are random variables we will use $P(Y_1,\dots,Y_k)$ to denote their joint distribution.
 \item The joint distribution does not directly tell us the probabilities of observing e.g. someone with only one mutation. This can be obtained via \dfn{marginalization} which we say above; that is, summing over the other variable:
-\textcolor{orange}{\begin{equation}
+\begin{equation}
 P(Y_A)  = \sum_{y}P(Y_A,y) = P(Y_A,Y_B = 0)  +P(Y_A,Y_B= 1)
-\end{equation}}
+\end{equation}
 where in the general the sum is taken over all possible outcomes for the second variable. $\Prob(Y_1)$ is defined similarly. 
-\item In the example above \textcolor{orange}{
+\item In the example above 
 \begin{equation}
 Y_A \sim {\rm Bernoulli}\left(\frac{5}{8}\right).
-\end{equation}}
+\end{equation}
 This is the distribution of $Y_A$ absent any knowledge of $Y_B$. 
 %\item  Some notation: A longer way to write $P(1,1)$ would be $P(\{Y_A = 1\}\cap \{Y_B = 1\})$ where $\cap$ mean AND. On the other hand,  $\cap$ means OR, so 
 %\begin{align*}
