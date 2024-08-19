@@ -1,29 +1,32 @@
 
+This schedule is subject to changes throughout the course at my discretion. Readings will be finalized the friday before they are covered in class.
+For the readings, ER means  
 
 *  **Week 1: Discrete Probability and Monte Carlo Simulations**
-   * Goals:
+   * Topcs:
      * Familiarity with basic concepts in probability (events, probability distribution, conditioning, means, variances)
      * Basics of python programming (arrays, Dataframes, plotting)
      * The concept of Monte Carlo simulation
    * Reading: 
-     * ER: 1.1,1.2,1.5.1,2.1 and 2.8
+     * ER: 1.1,1.2,1.3(skim),1.5.1,2.1 and 2.3 (Examples 2.3.3 and 2.3.4),2.8
+       * Note: There is a lot of material in these chapters that I won't cover in detial, refer to the notes for specific definitions and Theorems. The most important concept is conditional probability (1.5)
      * ISP: 2.3
-     * Notes
-   * Assignments: HW1
+       * Note: I use ``np.random`` instead of ``np.random.default_rng``
+   * Assignments due: Python tutorial
   
 * **Week 2: iid Sums, Binomial and CLT**
-  * Goals: 
+  * Topcs: 
     * Expectations and variances
     * Binomial distribution 
     * The Law of large numbers and “soft” Central limit theorem
     * Understanding of continuous probability distributions and what a probability density is. 
   * Reading:
     * ER: 2.8 and 3.1
-  * Assignments: HW2
+  * Assignments due: HW2
 
 
 * **Week 3: Linear regression basics (single-predictor)**
-  * Goals: 
+  * Topics: 
     * Bivariate Normal
     * Single predictor regression
     *  Performing regressoin in statsmodels 

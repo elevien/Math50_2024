@@ -140,62 +140,7 @@ There are two different ways we can interpret a statement like: The probability 
 
 
 %--------------------------------------------------------------------------------------------------------------------------------
-\section{Python as a tool for statistical modeling \cite[Sec. 2.3]{islp}}
-\begin{itemize}
-\item When we generate samples using a computer we call them \dfn {simulations}. We will use python to perform simulations, and it is therefore important to have a basic understanding of the python language. It is assumed that you will go through the separate python tutorial notebook. For convenience, we will cover some basic tasks in this \href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=_c4br6SCUtUy}{Notebook}
-\end{itemize}
-
-\begin{example}[Flipping coins ]
-Let $J$ denote a random variable representing the number of times a coin is flipped before two heads appear in a row. In the class python notebook I've written code that simulates $J$. 
-\end{example}
-
-
-\begin{example}[Probability model from code]\label{ex:probfromcode}
-Write down the probability distribution for the output $y$ of the following code
-\begin{Verbatim}
-def myRV():
-  y = 0
-  flip1 = np.random.choice([0,1],p=[0.5,0.5])
-  if flip1 ==0:
-    y = 10
-  else:
-    flip2 = np.random.choice([0,1],p=[0.5,0.5])
-    if flip2 ==0:
-      y = 2
-    else:
-      y =0
-  return y
-\end{Verbatim}
-First, we determine the sample space. The possible values of $y$ are $10,2$ and $0$. So $S = \{0,2,10\}$. What is the chance of each of these? If flip1 is $0$ then we return $10$ and this happens with probability $1/2$. If it is not zero, then we return 2 with probability $1/2$, thus, the probability we return $2$ is $1/4$ and same for $0$. In summary
-\begin{align*}
-P(y = 10) &= \frac{1}{4}\\
-P(y = 0) &= \frac{1}{2}\\
-P(y = 2) &= \frac{1}{2}
-\end{align*}
-\end{example}
-
-
-
-
-\subsection{Monte Carlo Simulation}
-\begin{itemize}
-\item  Often, we run many simulations of a model in order to say something about the distribution without performing any analytical calculations. We call these \dfn{Monte Carlo} simulations. 
-\item Monte Carlo simulations make use of the fact that we can always conceptualize probabilities as fraction of things. That is, if we have $n$ samples of a variable $Y$ and we want to estimate $P(Y=y)$, then we can count the number for which $Y=y$ -- we denote this as $n(Y=y)$, and divide by the total number: $P(Y=y) \approx n(Y=y)/n$. 
-\item Questions concerning how many samples we need to generate to obtain meaningful estimates from Monte Carlo simulations will be addressed later on. 
-%\item We can always calculate the mean and standard deviation and mean of a sample regardless of the distribution it has been drawn from. However, we need to be careful, as the results may not be so meaningful. For example, the mean of a Bernoulli random variable is $q$, but (unless $q=0$ or $q=1$), the variable will never actually take on this value. For example, it might be more meaningful to think of the \dfn{mode}, which is the value that occurs most frequently. 
-\end{itemize}
-
-
-\begin{example}[Example \ref{ex:probfromcode} cont.]
-In the python notebook we test the probabilities from Example \ref{ex:probfromcode}. 
-\end{example}
-
-\begin{example}[Verifying a formula]
-In the python notebook we verify the formula derived above for the probability distribution of a geometric random variable. 
-\end{example}
-
-%--------------------------------------------------------------------------------------------------------------------------------
-\section{Independence and conditioning}
+\section{Independence and conditioning \cite[Sec. 2.8.1]{tabak}}
 
 
 
@@ -325,6 +270,62 @@ P(Y>z|X) = \frac{P(Y>z,X)}{P(X)}
 \end{itemize}
 
 
+
+
+%--------------------------------------------------------------------------------------------------------------------------------
+\section{Python as a tool for statistical modeling \cite[Sec. 2.3]{islp}}
+\begin{itemize}
+\item When we generate samples using a computer we call them \dfn{simulations}. We will use python to perform simulations, and it is therefore important to have a basic understanding of the python language. It is assumed that you will go through the separate python tutorial \href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=_c4br6SCUtUy}{notebook} and \cite[Sec. 2.3]{islp}. For convenience, we will cover some basic tasks in this 
+\end{itemize}
+
+\begin{example}[Flipping coins ]
+Let $J$ denote a random variable representing the number of times a coin is flipped before two heads appear in a row. In the class python notebook I've written code that simulates $J$. 
+\end{example}
+
+
+\begin{example}[Probability model from code]\label{ex:probfromcode}
+Write down the probability distribution for the output $y$ of the following code
+\begin{Verbatim}
+def myRV():
+  y = 0
+  flip1 = np.random.choice([0,1],p=[0.5,0.5])
+  if flip1 ==0:
+    y = 10
+  else:
+    flip2 = np.random.choice([0,1],p=[0.5,0.5])
+    if flip2 ==0:
+      y = 2
+    else:
+      y =0
+  return y
+\end{Verbatim}
+First, we determine the sample space. The possible values of $y$ are $10,2$ and $0$. So $S = \{0,2,10\}$. What is the chance of each of these? If flip1 is $0$ then we return $10$ and this happens with probability $1/2$. If it is not zero, then we return 2 with probability $1/2$, thus, the probability we return $2$ is $1/4$ and same for $0$. In summary
+\begin{align*}
+P(y = 10) &= \frac{1}{4}\\
+P(y = 0) &= \frac{1}{2}\\
+P(y = 2) &= \frac{1}{2}
+\end{align*}
+\end{example}
+
+
+
+
+\subsection{Monte Carlo Simulation}
+\begin{itemize}
+\item  Often, we run many simulations of a model in order to say something about the distribution without performing any analytical calculations. We call these \dfn{Monte Carlo} simulations. 
+\item Monte Carlo simulations make use of the fact that we can always conceptualize probabilities as fraction of things. That is, if we have $n$ samples of a variable $Y$ and we want to estimate $P(Y=y)$, then we can count the number for which $Y=y$ -- we denote this as $n(Y=y)$, and divide by the total number: $P(Y=y) \approx n(Y=y)/n$. 
+\item Questions concerning how many samples we need to generate to obtain meaningful estimates from Monte Carlo simulations will be addressed later on. 
+%\item We can always calculate the mean and standard deviation and mean of a sample regardless of the distribution it has been drawn from. However, we need to be careful, as the results may not be so meaningful. For example, the mean of a Bernoulli random variable is $q$, but (unless $q=0$ or $q=1$), the variable will never actually take on this value. For example, it might be more meaningful to think of the \dfn{mode}, which is the value that occurs most frequently. 
+\end{itemize}
+
+
+\begin{example}[Example \ref{ex:probfromcode} cont.]
+In the python notebook we test the probabilities from Example \ref{ex:probfromcode}. 
+\end{example}
+
+\begin{example}[Verifying a formula]
+In the python notebook we verify the formula derived above for the probability distribution of a geometric random variable. 
+\end{example}
 
 
 
@@ -659,7 +660,7 @@ P(Y>z|X) = \frac{P(Y>z,X)}{P(X)}
 %\end{enumerate}
 %\end{exercise}
 
- \bibliographystyle{unsrt}
+ \bibliographystyle{cell}
 \bibliography{./../refs.bib}
 
  
