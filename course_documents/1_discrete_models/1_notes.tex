@@ -1,0 +1,715 @@
+\include{./../latex/notes_style.tex}
+%--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+\title{Discrete probability modeling and simulation}
+\maketitle
+
+\section{Reading}
+\begin{itemize}
+\item Read section 2.3 from \cite{islp}.
+\item Read sections 1.1,1.2,1.5.1,2.1 and 2.8 \cite{tabak}
+\end{itemize}
+
+\section{Learning objectives}
+
+\begin{itemize}
+\item Familiarity with basic concepts in probability (events, probability distribution, conditioning, means, variances)
+\item Basics of python programming (arrays, Dataframes, plotting)
+\item The concept of Monte Carlo simulation
+\end{itemize}
+
+
+
+
+\section{Statistical models}
+
+% RETHINK THIS INTRO
+\begin{itemize}
+\item \dfn{Models} are simplified representations of the world.
+There are many ways to represent models, but in science (and life), we often use \dfn{mathematical models}. 
+\item The subject of this course is \dfn{regression models}\index{regression models}. We will define this precisely  later, but roughly speaking a regression model tells us how the distribution of a variable $y$ (the response variable) is related to another variable $x$ (the predictor). 
+\item Examples: Predicting height based on age, predicting the probability to get disease given a mutation
+\end{itemize}
+%
+%For example, you might be familiar with Newton's equation:
+%\begin{equation}\label{eq:fma}
+%F = ma
+%\end{equation}
+%which related the force ($F$) acceleration ($a$) and mass ($m$) of a particle. This a mathematical model of the motion of a  (non-relativistic) particle in a force field. While it isn't always true, it holds for such a wide range of applications that we call it a \emph{fundamental} law of nature, and it turns out to be extremely powerful. We can combine Newton's equation with other fundamental lows build models of more complicated systems involving many particles. For example, to build a model of planetary motion, we can combine Newton's equation with his other law of gravity, which states that the gravitation force between two objects of masses $m_1$ and $m_2$ a distance $r$ from each other is
+%\begin{equation}
+%F = G\frac{m_1m_2}{r^2}
+%\end{equation}
+%where $G$ is a constant.
+%We refer to these types of models -- that is, those which are built upon fundamental laws of nature -- as {\dfn mechanistic} models.
+%
+%In statistics, we are often interested in problems where nothing remotely close to a fundamental laws exist (yet). Instead, they are based directly on observations (data) or our intuitions. We will call these {\dfn phenomenological models}. Such models still be quite useful provided we are aware of their limitations. Of course, there is not sharp distinction between mechanistic and phenomenological models, but the distinction is helpful nonetheless. 
+%
+%
+%Often our models cannot make exact predictions about the value of a variable (this is true in both mechanistic and phenomenological models, but especially the latter). Instead, they only tell us the probability that a variable has a certain value, or falls within a range of values. 
+%
+%For example, if we were to construct a model of the $(y)$ of the height a randomly selected pine tree in New Hampshire as a function of its age $(x)$, we might begin by searching a relationship of the form
+%\begin{equation}
+%y = f(x)
+%\end{equation}
+%Such a model might be relevant for conservation efforts, since it would be important to understand how trees develop over time and influence their surrounding environment. 
+%However, if we take a {\dfn sample} of the population, meaning we go out and measure the height of some trees for which we know the age, we will quickly find that trees of the same age can have different heights.   This variation will be as result of many variables which are not in our model, e.g. the surrounding, the specific subspecies of pine, genetic variation within a subspecies to name just a few. In principle, we could construct a more complex model which includes, say, the DNA sequence of the tree ($g$):
+%\begin{equation}
+%y = f(x,g).
+%\end{equation}
+%This model would presumably have less variation. That is, if we collect a sample of trees for which we know the height and DNA sequence, we would find that the variation between trees with the same DNA and height is less than the variation between trees with only the same height. Yet variation will remain unless we include all the variables which effect tree height. However, it is not so useful to include these variables, since we can't actually measure most of them and many will have only a small influence on the tree height. One approach to dealing with these ``hidden" sources of variation is to define a {\dfn statistical model}, where $y$ is not the same for each tree of the same height, but is instead a {\dfn random variable}. On type of a statistical model is a regression model
+%\begin{equation}\label{eq:reg}
+%y = f(x) + \epsilon
+%\end{equation}
+%where $\epsilon$ is a random variable (usually one that is zero, on average). Models of this sort are the topic of this course. 
+%
+
+%--------------------------------------------------------------------------------------------------------------------------------
+\section{Discrete random variables and distributions}
+
+\begin{itemize}
+\item The rigorous mathematical theory for random variables is very useful, but requires certain machinery which is beyond the scope of these notes. Fortunately, we go a long way without such formalism. For our purposes, we can pretty much think of a random variable as any variable which we cannot predict prior to an observation of it, regardless of how much information we have. The classic example is the flip of a coin. 
+\item The \dfn {sample space} is all the possible values that a random variable may take on. For the coin this found be heads or tails, for the roll dice $1,2,\dots,6$ for the dice and the height of a true is would any positive number.  Usually the outcomes are numbers, even if we use a number to represent a non-numerical quantity (e.g. someone's gender).
+\item  In probability theory one distinguishes between outcomes and \dfn{events} -- the latter are subsets of outcomes. For example, we might refer to the event that the roll of a die is grater than $2$. 
+%It's good to be aware of these definitions, but you don't need to memorize them.
+\item We can characterize a random variable using  a \dfn{probability model}\index{probability model} or \dfn{probability distribution}\index{probability distribution}, which maps a set of possible events to real numbers between 0 and 1. 
+\item  The \dfn{Bernoulli distribution} is probably the simplest probability distribution. It models a variable with binary outcome, for example the result of a YES/NO survey or a COVID test. 
+The probability distribution can be written as a piecewise function 
+\begin{equation}\label{eq:pmbern}
+P(Y=y) = \left\{\begin{array}{lr} q & y=0\\ (1-q) & y= 1 \end{array}\right.
+\end{equation}
+%or as
+%\begin{equation}
+%P(Y) = q^Y(1-q)^{1-Y}.
+%\end{equation}
+\item These formulas make sense for any $0\le q\le1$. We say that $q$ is a \dfn {parameter}\index{parameter} of the distribution. 
+In order to state that a Bernoulli distribution is a model for some random variable $Y$, we write
+\begin{equation}
+Y \sim {\rm Bernoulli}(q).
+\end{equation}
+\item In general a probability distribution is a function that describes how likely certain outcomes are. 
+\item In general, if $Y$ is some random variable which could take ANY $y$, we define a probably distribution as a function from the space of all possible outcomes to an interval $[0,1]$. 
+\item For example,  the space of outcomes $S = \{\text{heads},\text{tails}\}$ or $S = \{1,2,3,4,5,6\}$ (a dice).  
+\item There are some rules for such functions. 
+\begin{itemize}
+\item $P(U) \le 1$  for $U \subset S$
+\item $P(U) \ge 0$ for $U \subset S$. Here $\subset$ means a subset of $S$, for example $\{1,2,3\} \subset \{1,2,3,4,5,6\}$. 
+\item For a disjoint family of sets $U_i$
+\begin{equation*}
+ \sum_{i}P(U_i) = P\left(\cup_i U_i\right)
+\end{equation*}
+Here $\cup$ means ``or'', for example, 
+\begin{equation*}
+ P\left(\text{heads} \cup \text{tails} \right) 
+ \end{equation*}
+ is the probability that a coin is either heads or tails, which is of course one for any reasonable model. 
+\end{itemize}
+
+%\begin{example}(Two coins)
+%Suppose we flip two separate coins. The sample space is 
+%\begin{equation}
+%S = \{(0,0),(0,1),(1,0),(1,1)\}
+%\end{equation}
+%The events that the first coin is $1$ and second coin is one must be independent. Therefore 
+%\end{example}
+
+
+%\item It is very important that the sum of $P(Y)$ over all possible outcomes is $1$ -- this is simply saying that we are certain one of the outcomes will happen. We might use $P(1)$ or $P(\{1\})$ to mean ``the probability that $Y=1$", or, in there is some ambiguity in which variable we are referring to, we might write $P(Y=1)$. 
+\begin{example}\label{ex:twocoins} Suppose we flip two fair coins and let $Y_A$ and $Y_B$ denote the outcomes.%$ such that 
+%\begin{align*}
+%Y_A \sim {\rm Bernoulli}(q_1)\\
+%Y_B \sim {\rm Bernoulli}(q_2)
+%\end{align*}
+  The sample space is 
+\begin{equation*}
+S = \{(0,0),(0,1),(1,0),(1,1)\}
+\end{equation*}
+For example, the event $(0,0)$ means that both genes are zero.  If the coins are not biased, then each of the outcomes above should have the same probability. Thus each should have probability $p$. I'll use the notation 
+\begin{equation*}
+P(Y_A = 1,Y_B = 0) = P_{A,B}(1,0) = p
+\end{equation*}
+We also know by additivity 
+\begin{equation*}
+P_{A,B}(0,0) + P_{A,B}(0,1)+ P_{A,B}(1,0) + P_{A,B}(1,1) = 4p = 1 \implies p = \frac{1}{4}. 
+\end{equation*}
+Another way to write this is 
+\begin{equation*}
+P_{A,B}(1,1) = P_A(1)P_B(1)  = \frac{1}{2} \times \frac{1}{2}
+\end{equation*}
+\end{example}
+
+
+
+
+\begin{example}(Geometric distribution)
+Suppose we flip a fair coin until we see a heads. Let $Y$ be the number of flips until we see a heads. This is example of a  \dfn{geometric distribution}, which is the number of trials of independent, identically distributed (iid) Bernoulli random variables until we see $k$ successes. In more mathematical notation, if
+\begin{equation*}
+X_i \sim {\rm Bernoulli}(q), \quad i = 1,2,3,\dots
+\end{equation*}
+then 
+\begin{equation*}
+Y = \min_{i\ge0}\left\{i:X_i=1 \right\}
+\end{equation*} 
+and we would say 
+\begin{equation*}
+Y \sim {\rm Geometric}(p).
+\end{equation*}
+The sample space of $Y$ is $\{1,2,\dots,\infty\}$. What is the probability distribution? 
+\begin{align*}
+P(Y=k) &= P(X_1=0,X_2=0,\dots,X_{k-1}=0,X_k=1) \\
+&= P(X_1 = 0) \cdots  P(X_{k-1}=0)P(X_k=1) \\
+&= (1-q)^{k-1}q
+\end{align*}
+This has the expected properties of $Y$. In particular, it decays as $k$ increases and the decay is faster the larger $q$ is. 
+
+%\href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=36vlB9r1Wts5}{Verifying an analytical formula with simulations}
+\end{example}
+
+
+\item  More generally, for a distribution with a particular name and set of parameters, we will write 
+\begin{equation*}
+{\rm Variable} \sim {\rm Distribution}({\rm parameters}).
+\end{equation*}
+We will sometimes use $\theta$ to denote the parameters. 
+\item A measurement of a random variable is a \dfn {sample} and  \dfn {statistical inference}\index{statistical inference} is the process of estimating the parameters $\theta$ from a sample of a random variable. 
+\item Consider the example of a survey: let's suppose we don't have information about every student in the college. Rather, a survey of five students from this class is conducted, finding $4$ yeses and $1$ no. What is our best prediction of the total fraction of students in the college who answered YES? What assumption do we make when we answer this question? 
+\item {\bf Probabilities as fraction vs. belief}
+There are two different ways we can interpret a statement like: The probability someone in this room is over $6$ feet is $95\%$. Either it can be interpreted as a measure how likely it is to find someone in the room over $6$ feet, or if we were to hypothetically generate random samples over and over what fraction of them would contain someone over $6$ feet. 
+\end{itemize}
+
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------
+\section{Python as a tool for statistical modeling}
+\begin{itemize}
+\item When we generate samples using a computer we call them \dfn {simulations}. We will use python to perform simulations, and it is therefore important to have a basic understanding of the python language. It is assumed that you will go through the separate python tutorial notebook. For convenience, we will cover some basic tasks in this \href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=_c4br6SCUtUy}{Notebook}
+\end{itemize}
+
+\begin{example}[Flipping coins ]
+Let $J$ denote a random variable representing the number of times a coin is flipped before two heads appear in a row. In the class python notebook I've written code that simulates $J$. 
+\end{example}
+
+
+\begin{example}[Probability model from code]\label{ex:probfromcode}
+Write down the probability distribution for the output $y$ of the following code
+\begin{Verbatim}
+def myRV():
+  y = 0
+  flip1 = np.random.choice([0,1],p=[0.5,0.5])
+  if flip1 ==0:
+    y = 10
+  else:
+    flip2 = np.random.choice([0,1],p=[0.5,0.5])
+    if flip2 ==0:
+      y = 2
+    else:
+      y =0
+  return y
+\end{Verbatim}
+First, we determine the sample space. The possible values of $y$ are $10,2$ and $0$. So $S = \{0,2,10\}$. What is the chance of each of these? If flip1 is $0$ then we return $10$ and this happens with probability $1/2$. If it is not zero, then we return 2 with probability $1/2$, thus, the probability we return $2$ is $1/4$ and same for $0$. In summary
+\begin{align*}
+P(y = 10) &= \frac{1}{4}\\
+P(y = 0) &= \frac{1}{2}\\
+P(y = 2) &= \frac{1}{2}
+\end{align*}
+\end{example}
+
+
+
+
+\subsection{Monte Carlo Simulation}
+\begin{itemize}
+\item  Often, we run many simulations of a model in order to say something about the distribution without performing any analytical calculations. We call these \dfn{Monte Carlo} simulations. 
+\item Monte Carlo simulations make use of the fact that we can always conceptualize probabilities as fraction of things. That is, if we have $n$ samples of a variable $Y$ and we want to estimate $P(Y=y)$, then we can count the number for which $Y=y$ -- we denote this as $n(Y=y)$, and divide by the total number: $P(Y=y) \approx n(Y=y)/n$. 
+\item Questions concerning how many samples we need to generate to obtain meaningful estimates from Monte Carlo simulations will be addressed later on. 
+%\item We can always calculate the mean and standard deviation and mean of a sample regardless of the distribution it has been drawn from. However, we need to be careful, as the results may not be so meaningful. For example, the mean of a Bernoulli random variable is $q$, but (unless $q=0$ or $q=1$), the variable will never actually take on this value. For example, it might be more meaningful to think of the \dfn{mode}, which is the value that occurs most frequently. 
+\end{itemize}
+
+
+\begin{example}[Example \ref{ex:probfromcode} cont.]
+In the python notebook we test the probabilities from Example \ref{ex:probfromcode}. 
+\end{example}
+
+\begin{example}[Verifying a formula]
+In the python notebook we verify the formula derived above for the probability distribution of a geometric random variable. 
+\end{example}
+
+%--------------------------------------------------------------------------------------------------------------------------------
+\section{Independence and conditioning}
+
+
+
+\begin{itemize}
+\item We start by considering the example of two variables which are not independent. 
+\begin{example}[Gene model]\label{ex:mut} In this case, we need a model of both variables together (For example, this could be the model of whether someone has a mutation at two sites the genome):
+\begin{equation*}\label{eq:gene}
+P(Y_A,Y_B) = \left\{ \begin{array}{cc}
+1/2 & \text{ if }Y_A=0 \text{ and } Y_B = 0\\
+1/8 & \text{ if }Y_A=0 \text{ and } Y_B = 1\\
+1/8 & \text{ if }Y_A=1 \text{ and } Y_B = 0\\
+1/4 & \text{ if }Y_A=1 \text{ and } Y_B = 1\\
+\end{array}
+ \right.
+\end{equation*}
+The sample space is the same as Example \ref{ex:twocoins}, but we can check that $Y_A$ and $Y_B$ are no longer independent:
+\begin{equation*}
+P(Y_A=0,Y_B=0) =  \frac{1}{2}
+\end{equation*}
+on the other hand 
+\begin{align*}
+P(Y_A=0) &= P((0,1) \text{ or }(0,0)) = P(0,1) + P(0,0) = \frac{1}{8} + \frac{1}{2} =\frac{5}{8} \\
+P(Y_B=0) &= P((0,0) \text{ or }(1,0)) = P(0,0) + P(1,0) = \frac{1}{2} + \frac{1}{8}= \frac{5}{8}
+\end{align*}
+and $25/64  \approx  0.39 \ne 1/2$. 
+
+
+%\begin{equation*}
+%P(Y_A=0,Y_B=0) =  \frac{1}{3}
+%\end{equation*}
+%on the other hand 
+%\begin{align*}
+%P(Y_A=0) &= P((0,1) \text{ or }(0,0)) = P(0,1) + P(0,0) = \frac{2}{3}\\
+%P(Y_B=0) &= P((1,0) \text{ or }(0,0)) = P(1,0) + P(0,0) = \frac{1}{6} + \frac{1}{3}=  \frac{1}{2} 
+%\end{align*}
+%and $5/6 \times 2/3 = 5/9 >1/2$. 
+
+
+%We could also write this as 
+%\begin{equation*}
+%\Prob(Y_A,Y_B) = \frac{1}{2}(1-Y_A)(1-Y_B) + \frac{1}{3}(1-Y_A)Y_B + \frac{1}{6}Y_A(1-Y_B) + \frac{1}{6}Y_AY_B
+%\end{equation*}
+%\begin{solution}
+%There are $4$ outcomes, so we can identify each with a number as follows:
+%\begin{equation}
+%(0,0) \to 1,\quad (0,1) \to 2,\quad (1,0) \to 3,\quad (1,1) \to 4
+%\end{equation}
+%We then use the random choice function
+%\begin{Verbatim}
+%np.random.choice([1,2,3,4],p=[1/8,1/8,1/4,1/2])
+%\end{Verbatim}
+%\end{solution}
+\end{example}
+\item When we have two variables we call $P(Y_A,Y_B)$ is an example of a \dfn{joint distribution}. It tells us the probabilities for observing \emph{both} variables together, e.g. observing a person with both mutations. In general, if $Y_1,\dots,Y_k$ are random variables we will use $P(Y_1,\dots,Y_k)$ to denote their joint distribution.
+\item The joint distribution does not directly tell us the probabilities of observing e.g. someone with only one mutation. This can be obtained via \dfn{marginalization} which we say above; that is, summing over the other variable:
+\textcolor{orange}{\begin{equation}
+P(Y_A)  = \sum_{y}P(Y_A,y) = P(Y_A,Y_B = 0)  +P(Y_A,Y_B= 1)
+\end{equation}}
+where in the general the sum is taken over all possible outcomes for the second variable. $\Prob(Y_1)$ is defined similarly. 
+\item In the example above \textcolor{orange}{
+\begin{equation}
+Y_A \sim {\rm Bernoulli}\left(\frac{5}{8}\right).
+\end{equation}}
+This is the distribution of $Y_A$ absent any knowledge of $Y_B$. 
+%\item  Some notation: A longer way to write $P(1,1)$ would be $P(\{Y_A = 1\}\cap \{Y_B = 1\})$ where $\cap$ mean AND. On the other hand,  $\cap$ means OR, so 
+%\begin{align*}
+%P(\{Y_A = 1\}\cup \{Y_B = 1\}) &=P(\{Y_A = 1,Y_B=0\}\cup  \cdots \cup \{Y_A = 0,Y_B = 1\})\\
+%&  = P(1,0) + P(0,1) + P(1,1). 
+%\end{align*}
+\end{itemize}
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------
+\subsection{Conditioning}
+\begin{itemize}
+\item What if we are interested in the chance that someone has a mutation in gene $A$ and we know they do not have a mutation in gene $B$?  In this case, we introduce the \dfn{conditional probability} $P(Y_A=1|Y_B=0)$. This is defined as the chance that gene A has a mutation in a person if we know there is no mutation at gene B. If we want to think about this in terms of population averages, it is the fraction of mutations in gene $A$ among only those people without mutations in gene gene $B$. 
+\item More general, $P(X|Y=y)$ is the distribution of $X$ if we know the value of $Y=y$. 
+\item I'll use $N$ to denote the number of individuals in a population with a given gene configuration and $n$ the total population size. Interpreting probabilities as fraction, 
+\begin{align*}
+P(Y_A=1|Y_B=0) &= \frac{N(Y_A = 1,Y_B= 0)}{N(Y_B=0)} = \frac{N(Y_A = 1,Y_B = 0)/n}{N(Y_B=0)/n} \\
+&= \frac{P(Y_A = 1,Y_B = 0)}{P(Y_B = 0)}
+\end{align*}
+
+
+\begin{example}[Example \ref{ex:mut} cont.]
+Consider Example \ref{ex:mut}. We would have 
+\begin{equation*}
+P(Y_A = 1|Y_B = 0) = \frac{P(1,0)}{P(Y_B = 0)} = \frac{1/8}{5/8} = \frac{1}{5} 
+\end{equation*}
+We can easily perform this computation using simulated data in python. In the python notebook we use Use Monte carlo simulations to show they are not independent. 
+\end{example}
+
+
+
+\begin{example}[Example \ref{ex:probfromcode} cont.]
+In the code from Example \ref{ex:probfromcode} cont. we have the internal variables flip1 and flip2. If $Y$ is the output, what is the conditional distribution 
+\begin{equation*}
+Y|({\rm flip1}==1)
+\end{equation*}
+\end{example}
+
+\item In general, we have 
+\begin{equation}
+P(Y|X) = \frac{P(Y,X)}{P(X)}.
+\end{equation}
+Notice that we can replace $P(Y,X) = P(Y|X)P(X)$, to obtain Baye's formula 
+\begin{equation}\label{eq:bayes}
+P(Y|X) = \frac{P(Y,X)}{P(X)}.
+\end{equation}
+\item Two variables are said to be \dfn{independent} if $P(Y|X)  = P(Y)$ and $P(X|Y) = P(Y)$.  
+\item Can you see why $X$ being independent of $Y$ implies $Y$ is independent of $X$?
+Equation \eqref{eq:bayes} is also true for events, for example, we will encounter things like 
+\begin{equation}\label{eq:bayes}
+P(Y>z|X) = \frac{P(Y>z,X)}{P(X)}
+\end{equation}
+
+
+%For our purposes, it is important to understand the process of conditioning with data. 
+%\item \begin{example}
+%\href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=roga82kQRaau}{Showing independence}
+%\end{example}
+%\item \begin{example}
+%\href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=roga82kQRaau}{Conditional averages}
+%\end{example}
+\end{itemize}
+
+
+
+
+
+
+%\begin{exercise}
+%Suppose we are counting the number  $\{1,2,3,4,5,6,7,8,9,12\}$
+%\end{exercise}
+
+
+%%First, we will assign variables and perform arithmetic. 
+%
+%%These operations are pretty intuitive: 
+%%\begin{Verbatim}
+%%x = 1
+%%y = 2
+%%z = x + y
+%%print(z)
+%%z = x*y 
+%%print(z)
+%%\end{Verbatim}
+%%We will work heavily with vectors, or lists of numbers in this course. 
+%%\begin{Verbatim}
+%%a = [1,2,3] # make empty list
+%%a.append(5) # add 5 to the end of the list
+%%print(a) # print the list
+%%print(a[2])	# index the list
+%%print(a[0:2])	
+%%print(a[a>2]) # obtain a subset of the list
+%%# easy way to make an array
+%%a = range(5)
+%%print(a[0])
+%%\end{Verbatim}
+%%We will work with a package called numpy, which provides a wrapper for the python list affording us some additional functionality. 
+%%\begin{Verbatim}
+%%import numpy as np # import the numpy package
+%%a = np.zeros(5)
+%%a = np.array([0,0,0,0,0])
+%%# advantage of numpy arrays:
+%%a = np.array([1,2,3])
+%%b = np.array([5,3,2])
+%%a + b
+%%# get the length of an array 
+%%len(a)
+%%# generate array 
+%%a = np.linspace(0,1,100)
+%%print(a)
+%%\end{Verbatim}
+%%Loops allow us to repeat an operation, or carry out an operation over some range of values
+%%\begin{Verbatim}
+%%for k in range(5):
+%%	print(k)	
+%%\end{Verbatim}
+%%The same thing can be achieved with a while loop 
+%%\begin{Verbatim}
+%%k = 0
+%%while k<5: 
+%%	print(k)
+%%	k = k+1
+%%\end{Verbatim}
+%%
+%%In many instances, it is helpful to put code we will reuse in a function. 
+%%\begin{Verbatim}
+%%def test_func(z)
+%%	k = 0
+%%	while k<z: 
+%%		print(k)
+%%		k = k+1
+%% 	return k
+%%a = test_func(k)
+%%\end{Verbatim}
+%
+%
+%%\begin{solution}
+%%Making only a few changes to the existing code and putting it in a function 
+%%\begin{Verbatim}
+%%def print_triangle(n)
+%%    for i in range(n):
+%%      for j in range(i)
+%%        print(i)
+%%        print(",")
+%%      print(i)
+%%      println()
+%%\end{Verbatim}
+%%\end{solution}
+%%\begin{exercise}
+%%Determine what the following lines for code will output
+%%\begin{enumerate}
+%%\item What will be the value of $z$ after the following line of code is run?
+%%\begin{Verbatim}
+%%z = 1
+%%for k in range(3):
+%%  z = z+k
+%%\end{Verbatim}
+%%\item What will the following code print?
+%%\begin{Verbatim}
+%%x = 11
+%%k = 1
+%%while x>2:
+%%  x = x-2
+%%  print(k)
+%%  k = k+1
+%%\end{Verbatim}
+%%
+%%\item Consider the code
+%%\begin{Verbatim}
+%%for i in range(5):
+%%  for j in range(i)
+%%    print(i)
+%%    print(",")
+%%  println()
+%%\end{Verbatim}
+%%modify this code to print
+%%\begin{Verbatim}
+%%1 *
+%%1,2 *
+%%1,2,3 *
+%%1,2,3,4 *
+%%\end{Verbatim}
+%%\end{enumerate}
+%%\end{exercise}
+%
+%
+%%\begin{boxB}{Simulations}
+%% Here, we will focus on tools relevant for statistics. In Python, we can simulate random variables using the \verb|numpy| library:
+%%\begin{Verbatim}
+%%import numpy as np
+%%q = 0.5
+%%y = np.random.choice(range(2),p=[q,1-q])
+%% \end{Verbatim}
+%% We can generate multiple samples using a for loop
+%%\begin{Verbatim}
+%%n_samples = 100
+%%y = np.zeros(n_samples) # makes an empty list (i.e. array) of n_samples zeros.
+%%for k in np.range(n_samples):
+%%  y[k] = np.random.choice(range(2),p=[q,1-q])
+%% \end{Verbatim}
+%%A simpler way of doing this is
+%%\begin{Verbatim}
+%%y = np.random.choice(range(2),n_samples,p=[q,1-q])
+%% \end{Verbatim}
+%%
+%%
+%%  The more general form of this command is
+%%\begin{Verbatim}
+%%y = np.random.choice(range(k),n_samples,p=[q_1,q_2,...,q_k])
+%% \end{Verbatim}
+%% where $q_1 + \cdots q_k = 1$. This will generate a sample from
+%%
+%
+%
+%
+%%
+%%\end{boxB}
+%%\begin{solution}
+%%For the fair die we have
+%%\begin{Verbatim}
+%%y = np.random.choice(range(6),n_samples,p=[1/6,1/6,1/6,1/6,1/6,1/6])
+%%\end{Verbatim}
+%%For the other one we have
+%%\begin{Verbatim}
+%%y = np.random.choice(range(6),n_samples,p=[0,2/6,1/6,1/6,1/6,1/6])
+%%\end{Verbatim}
+%%\end{solution}
+%
+%\item  We can also generate simulations of more complex random variables using simple ones.  In this case, it is useful to define a function in Python which generates samples of our new random variable. For, example:
+% \begin{example}
+% \href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=xCU9OVTijAmC&line=2&uniqifier=1}{Writing a function to run simulations of coin flips.}
+%\end{example}
+%%\begin{solution}
+%%\,
+%%\begin{Verbatim}
+%%def flip_until_two():
+%%  num_heads = 0
+%%  total_flips = 0
+%%  while num_heads <2:
+%%    y = np.random.choice([0,1])
+%%    if y == 0:
+%%      num_heads = 0
+%%    else:
+%%      num_heads = num_heads + 1
+%%    total_flips = total_flips + 1
+%%  return total_flips
+%% \end{Verbatim}
+%% \end{solution}
+%\end{itemize}
+%%\begin{solution}
+%%We need to change (1) the distribution we sample $y$ from and (2) the condition to stop. 
+%%\begin{Verbatim}
+%%def dice_until_two():
+%%  num_ones = 0
+%%  total_rolls = 0
+%%  while num_ones <2:
+%%    y = np.random.choice([1,2,3,4,5,6])
+%%    if y == 0:
+%%      num_ones = 0
+%%    else:
+%%      num_ones = num_ones + 1
+%%    total_rolls = total_rolls + 1
+%%  return total_rolls
+%% \end{Verbatim}
+%%\end{solution}
+%
+%\subsection{Visualization}
+%\begin{itemize}
+% \item An important tool for visualizing samples is a histogram. In python, we would write:
+%\begin{Verbatim}
+%plt.hist(samples,100,density=true)
+% \end{Verbatim}
+% \item  The histogram shows us the frequency of different outcomes. Histograms are discussed \href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=UkD_oWqXUq_k}{here}
+% \end{itemize}
+%
+% 
+% \subsection{Working with tabular data}
+% \begin{itemize}
+% \item Frequently, we will work with data in tabular form. We can do this using Numpy (hopefully you read about this in the python tutorial), e.g. 
+% \begin{Verbatim}
+% # imagine we have an array of times and corresponding temperature measurements:
+%times = np.array([1,2,3,4,5])
+%temps = np.array([72,71,75,75,73])
+%# we can make a 2d numpy array 
+%data = np.transpose(np.array([times,temps]))
+%data
+% \end{Verbatim}
+% \item The pandas package in python provides some additional functionality:
+% \begin{Verbatim}
+%# the pandas library provides a convenient way organize this data
+%import pandas as pd
+%df = pd.DataFrame(data,columns = ["time","tempature"])
+% \end{Verbatim}
+%
+%\item Examples from class can be found here \href{https://colab.research.google.com/drive/1Gs-gSsUP1hHVwhrbwvWzLVm1ulcLJKRI#scrollTo=UkD_oWqXUq_k}{here}.
+%\end{itemize}
+%
+%
+%
+%
+%
+%
+%
+
+
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------
+
+%\begin{example}[Testing formula for mean of Bernoulli random variable ]
+%In the python notebook we s
+%\end{example}
+
+
+
+
+
+
+ %[TALK IN MORE DETIAL ABOUT CONVERGENCE]
+ 
+
+
+%\begin{solution} 
+%First we generate some data
+%\begin{Verbatim}
+%y = np.random.choice([1,2,3,4],p=[1/8,1/8,1/4,1/2])
+%\end{Verbatim}
+%We can then obtain the sample conditioned on $Y_2$ having the mutation: 
+%\begin{Verbatim}
+%y[y ==1 or y==3]
+%\end{Verbatim}
+%The conditional probability would be 
+%\begin{Verbatim}
+%len(y_sub[y==1])/len(y_sub)
+%\end{Verbatim}
+%\end{solution}
+
+
+
+
+%
+%\begin{example}
+%In this case, we have
+%\begin{equation}\label{eq:ex_bayes}
+% \frac{P(Y_1=2,X_2=0)}{P(Y_2=0)} = \frac{q_{10}}{q_{10}+q_{01}}
+%\end{equation}
+%Use Monte Carlo simulations to confirm Equation  \eqref{eq:ex_bayes} for the values given in exercise ??.
+%\end{example}
+%
+%\begin{solution}
+%This is achieved by the following code:
+%\begin{Verbatim}
+%y = np.random.choice([1,2,3,4],1000,p=[1/8,1/8,1/4,1/2])
+%y_sub = y[y ==1 or y==3]
+%len(y_sub[y==1])/len(y_sub)
+%\end{Verbatim}
+%\end{solution}
+
+%--------------------------------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------------------------------
+
+%\begin{solution}
+%This is achieved by the following code:
+%\begin{Verbatim}
+%y = np.random.choice([1,2,3,4,5,6],1000,p=[1/6,1/6,1/6,1/6,1/6,1/6])
+%y_sub = y[y >2]
+%len(y_sub[y==3])/len(y_sub)
+%\end{Verbatim}
+%\end{solution}
+
+
+
+
+%\begin{exercise}
+%In this model you will combine what you've learned to build a model for student birthdays.
+%\begin{enumerate}
+%\item Construct a model for a statistical model for a students birthday. That is, you should treat a students birthday $Y$ (a number between $1$ and $366$ (to account for leap years).
+%\item Write python code which generates samples from this model.
+%\item Use Monte Carlo simulations to determine the chance that two students share the same birthday.
+%\end{enumerate}
+%\end{exercise}
+
+ \bibliographystyle{unsrt}
+\bibliography{./../refs.bib}
+
+ 
+\end{document}
+
+
+
+
+
