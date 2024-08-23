@@ -4,9 +4,6 @@ layout: default
 logo: logo.png
 
 ---
-<h1>Math 50 (2023)</h1>
-
-
 
 
 <details open><summary>About the course</summary>
@@ -89,8 +86,8 @@ See <a href="schedule.html">weekly schedule</a> for detials.
 <summary>Resources</summary>
 
 
-<h3>Textbooks:</h3>
-<p> The course will be self-contained in the Python notebooks and class notes. However, I will often reference the following textbooks for required readings and have borrowed some of the exercises from these books. They are available for free as PDFs.</p>
+
+<p> <strong> Textbooks: </strong> The course is based on two textbooks: </p>
 <ul>
     <li><a href="https://hastie.su.domains/ISLP/ISLP_website.pdf">Introduction to Statistical Learning (Python version)</a>: This is a textbook on statistics and machine learning which covers regression. It is helpful to get a different perspective. The approach I take is much more probabilistic. In particular, I prefer to make it more explicit how the models are grounded in underlying probability distributions.</li>
     <li><a href="https://www.utstat.toronto.edu/mikevans/jeffrosenthal/">Probability and Statistics -- The Science of Uncertainty (Second Edition)</a>: This is a textbook on probability theory which is far more technical than the level of this course, however, it contains many useful examples and exercises which are appropriate for Math 50.</li>
