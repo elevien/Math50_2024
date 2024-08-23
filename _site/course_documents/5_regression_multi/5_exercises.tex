@@ -1,0 +1,163 @@
+\include{./../latex/notes_style.tex}
+%--------------------------------------------------------------------------------------------------------------------------------
+
+\title{Exercise set 5}
+
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  EXERCISES  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%---------------------------------------------------------------------------------
+\begin{exercise}[A binary and normal predictor]\label{ex:binnorm}
+Consider the a linear regression model 
+\begin{equation*}
+Y|(X_1,X_2) \sim {\rm Normal}(\beta_0 + \beta_1X_1 + \beta_2X_2,\sigma^2)
+\end{equation*}
+ where the two predictors obey
+\begin{align*}
+X_1 &\sim {\rm Bernoulli}(q)\\
+X_2|X_1 &\sim {\rm Normal}(bX_1,\sigma_{2,1}^2)
+\end{align*}
+You can assume $\beta_0 =0$ for this problem. 
+\begin{enumerate}[label=(\alph*)]
+\item Derive a formulas for ${\rm cov}(X_1,X_2)$ and ${\rm var}(X_2)$ in terms of the model parameters. 
+%Then use this to derive a formula for the correlation coefficient between $X_1$ and $X_2$, which we will denote as $\rho_{1,2}$. 
+%\item Let 
+%\begin{equation*}
+%r^2 = 1- \frac{{\rm var}(Y|X)}{{\rm var}(Y)}.
+%\end{equation*}
+%Recall that this is the quantity which is being approximated by the $R^2$ reported in \verb!statsmodels!. 
+%Derive a formula for $r^2$ in terms of the model parameters. 
+\item Derive a formula for ${\rm cov}(Y,X_1)$ in terms of $\beta_1$, $q$, $\beta_2$ and $b$.  
+%\begin{equation*}
+%{\rm cov}(Y,X_1) =  (\beta_1q + \beta_2bq)(1-q)
+%\end{equation*}
+\item Explain how the formula you derived in part (b) is related to the equation for ${\rm cov}(Y,X_1)$ in the single predictor regression model (page 4 on week 3 notes). In particular, for what parameter values do the two formulas coincide? Your conclusion will be a particular case of what we saw to be true more generally (see week 5 notes) concerning the relationship between $\beta_1$ and the covariances in a regression model with two predictions. 
+%\item ({\bf optional}) Derive the formula
+%\begin{equation*}
+%{\rm var}(Y) = q(1-q)\left(\beta_1^2 + \beta_2^2b^2 + 2 b \right) + \beta_2^2\sigma_{2|1}^2
+%+ \sigma^2
+%\end{equation*}
+%You will need to use the formula from the additional exercise set: For two (not necessarily independent) random variables $Z$ and $Z'$
+%\begin{equation*}
+%{\rm var}(Z+Z') = {\rm var}(Z) + {\rm var}(Z') + 2{\rm cov}(Z,Z'). 
+%\end{equation*}
+%This is the formula in the ``addition and multiplication section'' on the \href{https://en.wikipedia.org/wiki/Variance#Properties}{wikipedia  page}.
+\item ({\bf optional}) The calculations in part (c) allows us to solve an exercise in Chapter 8 in Demidenko's textbook \cite{demidenko2019advanced}, albeit in the more restrictive  context of a binary and normal predictor: 
+Is it possible that $\beta_1$ and $\beta_2$ are {\bf both negative}, yet the (marginal) slope of $Y$ vs. $X_1$ is {\bf positive}? If so, generate simulated data where this is the case. 
+\end{enumerate}
+\end{exercise}
+
+
+
+
+
+\begin{exercise}[Earnings data revisited] Consider the earnings data. This can be loaded with 
+\begin{Verbatim}
+df = pd.read_csv("https://raw.githubusercontent.com/avehtari
+/ROS-Examples/master/Earnings/data/earnings.csv")
+\end{Verbatim}
+As in the previous exercise set, you will study the association between earnings and gender, but now using regression with multiple predictors. 
+
+\begin{enumerate}[label=(\alph*)]
+\item Perform a linear regression using \verb!statsmodels! with gender and height as predictors. 
+\item Provide interpretations for each regression coefficient (like we did in class for the test score example). 
+\item Which factor, height or gender is more important based on your analysis? 
+\item Based one the fitted model, predict the chance that someone who is not male and is 5.8ft earns more than a male who is the same height? To get a sense for the importance (or lack-thereof) of the height predictor, compare this to the chance that a male earns more than a non-male (regardless of height).
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Sample distribution]\label{ex:sampledist}
+In the \href{https://colab.research.google.com/drive/1oIRgP_7-c5DGV1D2iz5nj406mZfJxUIG?usp=sharing}{notebook from class}, we wrote code to generate samples from the sample distribution of $(\hat{\beta}_1,\hat{\beta}_2)$ in the model 
+\begin{align*}
+X_1 &\sim {\rm Normal}(0,1). \\
+X_2|X_1 &\sim {\rm Normal}(bX_1,1-b^2)\\
+Y|(X_1,X_2) &\sim {\rm Normal}( \beta_1X_1 + \beta_2X_2,\sigma^2) 
+\end{align*} 
+Specifically, we had a function which takes $\beta_1$, $\beta_2$ and $\beta_0$ as inputs and returns a dataframe where the columns are the samples of $\hat{\beta}_1$ and $\hat{\beta}_2$ respectively. When we plotted the correlation coefficient as a function of $b$ values and estimates the correlation coefficient between $\hat{\beta}_1$ and $\hat{\beta}_2$, it was a decreasing line. 
+%Consider the model from Exercise \ref{ex:binnorm}. We will study the sample distribution of the fitted regression coefficients $\hat{\beta}_1$ and $\hat{\beta}_2$. 
+%\begin{enumerate}[label=(\alph*)]
+%\item Let $q=0.3,b=2,\sigma_{2|1} = 0.3,\beta_1 = 10,\beta_2 = 2,\sigma=0.2$ and $n = 40$ (there are 40 data points). Generate $1000$ simulated data sets with these parameters values, and for each one save the fitted regression coefficients $\hat{\beta}_1$ and $\hat{\beta}_2$. Then make a scatter plot of $\hat{\beta}_2$ vs. $\hat{\beta}_1$. Before doing so, I recommend thinking for a moment about what you expect this to look like. What will the association between these two estimates be? Will it be negative or positive? 
+\begin{enumerate}[label=(\alph*)]
+\item What would happen if instead of plotting the correlation coefficient, we plotted ${\rm se}(\hat{\beta}_1)$ as a function of $b$? Would it increase? decrease? neither? Note that both $X_1$ and $X_2$ are standardized, so the distribution of $X_1$ values is not changed when we adjust $b$. In answering this question, you can either give a geometric intuition, or do a calculation. You should check your answer with simulations, but you still need to provide a detailed explanation. 
+\item Is it possible to have large standard errors on all the $\hat{\beta}_i$ values (measured relative to the true values of course), but still have a large (meaning close to one) value of $R^2$? If so, for what parameter values does this happen? Run simulation(s) to support your answer. 
+\end{enumerate}
+
+\end{exercise}
+
+%---------------------------------------------------------------------------------
+%\begin{exercise}[Height vs. weight paradox]
+%The following data has data concerning body weight as a function of exercises intensity. You can check that if we perform a regression using exercise intensity are our predictor and body weight as our response variable ($Y$), the data suggests that exercise increases body weight, counter to most of our intuition. Using a regression analysis with multiple predictors, try to reconcile this. 
+%\begin{Verbatim}
+%df = pd.read_csv("https://raw.githubusercontent.com
+%/eugenedemidenko/advancedstatistics/master/RcodeData/simpson.csv")
+%y = df.BodyW.values
+%x2 = df.Sex.values
+%x1 = df.ExInt.values
+%
+%fig,ax = plt.subplots(figsize=(5,2))
+%ax.plot(x1,y,"o")
+%ax.set_xlabel("exercise")
+%ax.set_ylabel("body weight")
+%\end{Verbatim}
+%\end{exercise}
+
+
+%---------------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------------
+%\begin{exercise}[Earnings data]
+%In class we fit the model 
+%\begin{align*}
+%y& = a_0 + a_{\rm male}x_{\rm male} + a_{\rm age}x_{\rm age} + a_{\rm black} x_{\rm black} \\
+%&+ a_{\rm white}x_{\rm white} + a_{\rm hispanic} x_{\rm hispanic} + a_{\rm other}x_{\rm other} + \epsilon
+%\end{align*}
+%where $y$ is earnings to the data set:
+%\begin{Verbatim}
+%data = pd.read_csv("https://raw.githubusercontent.com
+%/avehtari/ROS-Examples/master/Earnings/data/earnings.csv")
+%data = data.dropna() 
+%\end{Verbatim}
+%
+%Add height as a predictor to the model described above and perform a regression analysis. Discuss the conclusions of this analysis. In your discussion you should reference:
+%\begin{itemize}
+%\item Interpretation of regression coefficients
+%\item The $p$ values for each regression coefficient
+%\item The $R^2$ value
+%\end{itemize}
+%\end{exercise}
+
+
+%
+
+
+
+ \bibliographystyle{unsrt}
+\bibliography{./../refs.bib}
+
+
+
+\end{document}
+
+\begin{exercise}[Collinearity]
+Recall the example from class in which we generated samples from the sample distribution of $(\hat{\beta}_1,\hat{\beta}_2)$ given the model
+\begin{align*}
+Y &= \beta_1X_1 + \beta_2X_2 + \epsilon \\
+X_2 &= cX_1 + \epsilon_x \\
+X_1 &\sim {\rm Normal}(0,1). 
+\end{align*} 
+Specifically, we had a function which takes $\beta_1$, $\beta_2$ and $\beta_0$ as inputs and returns a dataframe where the columns are the samples of $\hat{\beta}_1$ and $\hat{\beta}_2$ respectively. When we plotted the correlation coefficient as a function of $c$ values and estimates the correlation coefficient between $\hat{\beta}_1$ and $\hat{\beta}_2$ it was a decreasing line. 
+
+\begin{enumerate}
+\item In the example above, what would happen if the standard deviation of $\hat{\beta}_1$ (which is essentially the standard error, or at least what the standard error is an approximation of) was plotted as a function of $c$? Note that both $x_1$ and $x_2$ are standardized, so the distribution of $x_1$ values is not changed when we adjust $c$. In answering this question, you can either give a geometric intuition, or do a calculation. You should check your answer with simulations, but you still need to provide a detailed explanation. 
+\item What do the standard errors of $\hat{a}_i$ reported by statsmodels tell us about the ability of our model to predict new $y$ values based on existing $x$ values in a regression with multiple predictors? What about $R^2$? Is it possible to have large standard errors on all the $\hat{\beta}_i$ values, but still have a large $R^2$? Run simulation(s) to support your answer. 
+\end{enumerate}
+\end{exercise}

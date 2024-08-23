@@ -1,0 +1,60 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+// @font-face {font-family:"QuicksandBook-Regular";src:url("./../fonts/Quicksand_Book.eot?") format("eot"),url("./../fonts/Quicksand_Book.woff") format("woff"),url("./../fonts/Quicksand_Book.ttf") format("truetype"),url("./../fonts/Quicksand_Book.svg#QuicksandBook-Regular") format("svg");font-weight:normal;font-style:normal;}
+
+/* @font-face kit by Fonts2u (https://fonts2u.com) */ @font-face {font-family:"Andalus";src:url("./../fonts/2.eot?") format("eot"),url("./../fonts/2.woff") format("woff"),url("./../fonts/2.ttf") format("truetype"),url("./../fonts/2.svg#Andalus") format("svg");font-weight:normal;font-style:normal;}
+
+/* Custom styles for expandable headers */
+p {
+  color:#000000
+}
+
+li {
+  color:#000000
+}
+/* Custom styles for expandable headers */
+details {
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 0.5em 0.5em 0.5em;
+  margin-bottom: 1rem;
+}
+
+
+
+summary {
+  font-weight: bold;
+  margin: 0.0em 0.0em 0;
+  padding: 0.5em;
+}
+
+
+details > h3 {
+  border-radius: 5px 5px 5px 5px;
+  background-color: #ffffff;
+  padding: 0px 0px;
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em;
+}
+
+details > li {
+  border-radius: 5px 5px 5px 5px;
+  padding: 0px 0px;
+  margin: 1.0;
+  padding: 0.5em 0.5em 0.5em;
+}
+
+
+details[open] > summary {
+  border-radius: 10px 10px 10px 10px;
+  border: 2px solid #000000;
+  background-color: #fbf6d5;
+  padding: 1.0em;
+  margin-bottom: 1rem;
+
+}

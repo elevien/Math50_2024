@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{tabak}
+John Tabak.
+\newblock {\em Probability and statistics: The science of uncertainty}.
+\newblock Infobase Publishing, 2014.
+
+\bibitem{islp}
+Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, et~al.
+\newblock {\em An introduction to statistical learning (python version)},
+  volume 112.
+\newblock Springer, 2013.
+
+\end{thebibliography}
