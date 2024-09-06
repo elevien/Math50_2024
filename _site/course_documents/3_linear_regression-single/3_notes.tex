@@ -1,25 +1,12 @@
 \include{./../latex/notes_style.tex}
 \begin{document}
 
-\title{LLN, CLT, Normal models and linear regression}
+\title{Normal models and linear regression}
 
 \maketitle
 \tableofcontents
 
-\section{Reading}
-\begin{itemize}
-%\item Read section 2.4 from \cite{islp}.
-\item Read chapter 4 of \cite{tabak}
-\end{itemize}
 
-\section{Learning objectives}
-
-\begin{itemize}
-\item The Central limit theorem (what it does and \underline{does not} tell us).
-\item Working with Normal random variables (linear transformations of them, calculating probabilities). 
-\item Correlation Normal random variables (Multivariate normal distribution). 
-\item Basic linear regression model with a single predictor. 
-\end{itemize}
 
 \newif\ifhideproofs
 %\hideproofstrue %uncomment to hide proofs
@@ -32,161 +19,6 @@
 \fi
 
 
-  
-  \section{The central limit theorem and sample distribution}
-  
-  
-\begin{itemize}
-\item We now have the formalism in place to state the Central Limit Theorem (CLT) in more precise terms. 
- \begin{thm} Let $X_i$ be a sequence of iid random variables and let 
- \begin{equation*}
-E[X_i] = \mu,\quad  {\rm var}(X_i) = \sigma^2
- \end{equation*}
-  and set 
-  \begin{equation*}
- S_N = \sum_{i=1}^N X_i.
- \end{equation*}
- Then 
- \begin{equation}\label{eq:clt}
-P\left( \frac{S_N-N\mu}{\sqrt{N \sigma^2}}<z\right) \to P(Z<z) 
- \end{equation}
-Where
-\begin{equation*}
-Z \sim {\rm Normal}(0,1)
-\end{equation*}
- \end{thm}
- \item The normal variable $Z$ with zero mean and variance one is called a \dfn{standard normal} random variable. Since evaluations of the CDF of a standard normal random variable appear so often, we use the shorthand 
- \begin{equation*}
- \Phi(z) = P(Z<z).
- \end{equation*}
-
- 
-\begin{example}[Binomial] Let 
-\begin{equation*}
-Y \sim {\rm Binomial}(N,q)
-\end{equation*}
-
-
- \noindent
-\underline{Question:} Assume $N$ is even and use the central limit theorem to approximate $P(Y<N/2)$ with a Normal distribution. How does the accuracy depend on $N$ and $q$? \\
-
- \noindent
-\underline{Solution:} Using that $\mu = E[X_i] = q$ and $\sigma^2 = {\rm var}(X_i) = q(1-q)$, we find that the normal approximation to $Y$ is 
-\begin{equation*}
-P\left( \frac{Y - Nq}{\sqrt{N \sigma^2}} <z\right) \to P(Z<z)
-\end{equation*}
-for 
-\begin{equation*}
-Z \sim {\rm Normal}(0,1). 
-\end{equation*}
-
-Now we write
-\begin{align*}
-P\left( Y<N/2\right) &= P\left(Y - Nq <N/2-Nq\right) \\
-&= P\left(\frac{Y - Nq}{\sqrt{N q(1-q)}} <\frac{N/2-Nq}{\sqrt{N q(1-q)}}\right)\\
-&= P\left(\frac{Y - Nq}{\sqrt{N q(1-q)}} < \sqrt{N} \frac{1-2q}{2\sqrt{q(1-q)}}\right)\\
-&\to P\left(Z < \sqrt{N} \frac{1-2q}{2\sqrt{q(1-q)}}\right) = \Phi\left( \sqrt{N} \frac{1-2q}{2\sqrt{q(1-q)}}\right)
-\end{align*}
-
-
-We can use \href{https://colab.research.google.com/drive/1_4zOruAWfJ3HQoIf9sjefk3z0APko94-?usp=sharing}{colab} to plot both sides of this equation. 
-%Note that if $q=1/2$, 
-%\begin{equation*}
-% P\left(Z < \sqrt{N} \frac{1-2q}{2\sqrt{q(1-q)}}\right)
-% = P(Z<0) = \frac{1}{2}
-%\end{equation*}
-%However, since only $N/2-1$ of the outcomes are strictly less than $1/2$, we have
-%\begin{equation*}
-%P(Y<N/2) = \frac{N/2-1}{N} = \frac{1}{2}-\frac{1}{N}
-%\end{equation*}
-%We could in principle correct for this -- it's called a continuity correction, but it only matter when $N$ is small. 
-%
-%
-% 
-
-%\item If we rearrange this equation 
-%\begin{equation*}
-%Y ``\approx" U =  \sqrt{N \sigma^2}Z + Nq
-%\end{equation*}
-%What is the distribution of $U$? 
-%\begin{equation}
-%P(U
-%\end{equation}
-
-
-
-
-\end{example}
-
-%\item {\bf Accuracy of CLT approximation and relative vs. absolute error:} In order to better understand how the accuracy of the CLT approximation depends on $N$, we make some plots of the error between the probabilities estimated using the CLT and the true probabilities (which we know from the formula for the Binomial distribution). There are two ways we can measure error. First, we could just look at the difference between the two probabilities:
-%\begin{equation*}
-%\text{Absolute Error} = \left|P\left( Y>N/2\right) - P\left(Z < \sqrt{N} \frac{1-2q}{2\sqrt{q(1-q)}}\right)\right|
-%\end{equation*}
-%However, in many cases, what really care about is the error relative to the true probability. For example, if the probabilities are both very very small (say we are trying to estimate the chance we get $99$ our of $100$ heads), then it more important that the error is very small. Thus, we introduce the relative error
-%\begin{equation*}
-%\text{Relative Error} = \frac{\left|P\left( Y>N/2\right) - P\left(Z < \sqrt{N} \frac{1-2q}{2\sqrt{q(1-q)}}\right)\right|}{P\left( Y>N/2\right)}
-%\end{equation*}
-%
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.6\textwidth]{./../figures/clt_binomial_err}
-%\caption{The absolute (left) and relative error (right) are indicted by the color (red $=$ more error) as a function of $q$ and $N$.  }
-%\end{figure}
-%%
-
-
-
-
- %\item It is useful to define a more general class of Normal random variables with arbitrary mean and variance. Let's suppose we define a new variable 
-%\begin{equation*}
-%Y = \sigma Z + \mu 
-%\end{equation*}
-%Then 
-%\begin{align*}
-%P(Z<z) &= P(\mu + \sigma Z_0<z) \\
-%&= P\left(Z<\frac{z - \mu}{\sigma}\right)\\
-%&= \int_0^{\frac{z - \mu}{\sigma}}f_0(y)dy
-%\end{align*}
-%Setting $u = \sigma y + \mu$ so that $dy = \sigma^{-1}du$ we get
-%\begin{equation*}
-%P(Z<z) = \frac{1}{\sigma} \int_0^zf_0\left(\frac{u -\mu}{\sigma} \right)du = \int_0^zf(u)du 
-%\end{equation*}
-%where
-%\begin{equation*}
-%f(y) = \frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(y-\mu)^2}{2\sigma^2}}. 
-%\end{equation*}
-%We also call the random variable $Z$ and write
-%\begin{equation*}
-%Z \sim {\rm Normal}(\mu,\sigma^2).
-
-
-
-\vspace{1cm}
-\begin{center}
-\textcolor{black}{{\bf \Huge Do Exercise 3}}
-\end{center}
-\vspace{1cm}
-
-\item {\bf Note on iid assumption:} One of the most important things to recognize about the CLT when it comes to application is that the assumptions that the $X_i$ are independent are not that important, so long as they are not too correlated. Even though the precise quantitive statement of the CLT won't when there are correlations, the sum will still be well approximated by a Normal distribution. We can state this in what I call the qualitative CLT. This is a point we will return to later! 
-
-\end{itemize} 
-
-
-%
-%
-%
-%\subsection{Central Limit Theorem}
-%\begin{itemize}
-%\item The \dfn{central limit theorem} tell us that when $y_i$ are independent and have a (finite) mean and variance $\mu_y$ and $\sigma_y$ and
-%\begin{equation*}
-% \hat{Y} = \frac{1}{N}\sum_{i=1}^Ny_i,
-%\end{equation*}
-%then the distribution of $\hat{Y}$ should be close to that of
-%\begin{equation*}
-%Y \sim {\rm Normal}(\mu_y,\sigma_y/\sqrt{N}).
-%\end{equation*}
-%\end{itemize}
 
 
 
@@ -195,12 +27,7 @@ We can use \href{https://colab.research.google.com/drive/1_4zOruAWfJ3HQoIf9sjefk
 
 
 
-
-
-
-
-
-\subsection{Properties of Normal random variables}
+\section{Properties of Normal random variables}
 \begin{itemize}
 
 \item {\bf Linear transformations of Normal random variables:}  Suppose 
@@ -397,14 +224,6 @@ regardless of the distribution of $X$ (assuming $\sigma_x^2 <\infty$). The intui
 \caption{}\label{fig:cov_effect}
 \end{figure}
 
-
-
-
-\vspace{1cm}
-\begin{center}
-\textcolor{black}{{\bf \Huge Do Exercises 4 an 5}}
-\end{center}
-\vspace{1cm}
 
 
 \item A crucial observation is that the covariance allows us to relate the parameter $\beta_1$ (the slope) in the model above to averages over $X$ and $Y$. In other words, it provides us with a means to estimate the slope from samples $(x_1,y_2),\dots,(x_n,y_n)$. 

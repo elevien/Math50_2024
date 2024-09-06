@@ -167,4 +167,5 @@ cython_debug/
 **/OLD
 **/textbooks
 **/syllabus
+**/course_documents
 .DS_Store
