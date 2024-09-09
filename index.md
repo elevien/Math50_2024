@@ -23,10 +23,9 @@ See <a href="schedule.html">weekly schedule</a> for detials.
 
 <p><strong>Note on coding:</strong> All coding for the course will be done in Python. Some advantages of Python (over R) are that: (1) We can easily run everything directly in the browser using Google <a href="https://colab.research.google.com/">Colab Notebooks</a>, so there is no need to download anything on your machine. (2) Python is widely used in data science and machine learning, both in academia and in industry. (3) While some very basic things are more difficult to implement, I think you’ll find it’s easier to generalize to more advanced methods. (4) I know Python and I’ve basically never coded in R.</p>
 
-<p><strong>My availability:</strong> I will hold office hours:</p>
+<p><strong>My availability:</strong> I will hold office hours in person:</p>
 <ul>
-    <li>Tuesday 1:00pm-2:00pm</li>
-    <li>Friday 3:30pm-4:30pm (X-hours, if I'm not using them to lecture)</li>
+    <li>Thursday 8:30am-10:00am AND 12:00pm - 1:30pm</li>
 </ul>
 <p>I will generally be available to answer questions on Slack (<span class="important">please use Slack over email for course-related matters</span>) throughout the week. I will occasionally answer questions on the weekend, but there is no guarantee.</p>
 </details>

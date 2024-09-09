@@ -9,14 +9,14 @@ logo: logo.png
 This schedule is subject to changes throughout the course at my discretion. Readings will be finalized the Friday before they are covered in class.  The textbooks references are: 
 * <strong>ER:</strong> Evans, Michael J., and Jeffrey S. Rosenthal. Probability and statistics: The science of uncertainty. Macmillan, 2004.
 * <strong>ISLP:</strong> James, Gareth, et al. An introduction to statistical learning: With applications in python. Springer Nature, 2023.
-* <strong>ROS:</strong> Gelman, Andrew, Jennifer Hill, and Aki Vehtari. Regression and other stories. Cambridge University Press, 2021.
+<!-- * <strong>ROS:</strong> Gelman, Andrew, Jennifer Hill, and Aki Vehtari. Regression and other stories. Cambridge University Press, 2021. -->
 
 <strong> Supplementary material:</strong>  Material in <i>italics</i> is meant to reenforce your understanding of the core course material, but you will not need to know the specific definitions/theorems/examples for the exams. 
 
-<strong> Regarding my notes:</strong> My course notes are meant as a supplement to the textbook readings and other resources. They are not a self contained reference for the course material and will inevitably contain some mistakes. I recommend using the notes to get an idea of what concepts/examples are emphasized and then reviewing this material in the textbook. 
+<strong> Regarding my notes:</strong> My course notes are meant as a supplement to the textbook readings and other resources. They are not a self-contained reference for the course material and will inevitably contain some mistakes. I recommend using the notes to get an idea of what concepts/examples are emphasized and then reviewing this material in the textbook. 
 
 
-See canvas for section specific updates and assignment due dates. 
+Please see canvas for section specific updates and assignment due dates. This schedule will be updated throughout the term. While I will attempt to stay a few weeks ahead in terms of planning the readings, readings will be finalized roughly one week before the material is covered. Class 
 
 
 <!-- ################################################################################################################ -->
@@ -57,14 +57,18 @@ See canvas for section specific updates and assignment due dates.
     <ul>
       <li>2.3 (python tutorial) --  I use <code>np.random</code> instead of <code>np.random.default_rng</code>.  </li>
     </ul>
+    <strong>Other:</strong>
+    <ul>
+      <li>Review the <a href="index.html">course policies</a>  and this schedule  </li>
+    </ul>
   </li>
 </ul>
 
-
+<!-- 
 <h3>Assignments due:</h3>
 <ul>
-  <li>Python tutorial</li>
-</ul>
+  <li>Review the python tutorial from ISP</li>
+</ul> -->
 
 </details>
 
@@ -105,7 +109,7 @@ See canvas for section specific updates and assignment due dates.
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW2</li>
+  <li>HW1</li>
 </ul>
 
 </details>
@@ -143,7 +147,8 @@ See canvas for section specific updates and assignment due dates.
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW3</li>
+  <li>HW2</li>
+  <li>HW1 Self-evaluation</li>
 </ul>
 
 </details>
@@ -156,7 +161,7 @@ See canvas for section specific updates and assignment due dates.
 
 <h3>Topics:</h3>
 <ul>
-  <li>Estimators (Monday) </li>
+  <li>Properties of Estimators (Monday) </li>
   <li>Confidence intervals (Monday) </li>
   <li>Hypothesis testing (Wednesday)</li>
   <li><strong>Computation:</strong> Hands on examples in <code>statsmodels</code> (Friday)</li>
@@ -180,7 +185,8 @@ See canvas for section specific updates and assignment due dates.
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW4</li>
+  <li>HW3</li>
+  <li>HW2 Self-evaluation</li>
 </ul>
 
 </details>
@@ -200,12 +206,14 @@ See canvas for section specific updates and assignment due dates.
 
 <h3>Reading:</h3>
 <ul>
-  <li>ER: [To be filled]</li>
+  <li>[TBD]</li>
 </ul>
 
 <h3>Assignments due:</h3>
 <ul>
   <li>Midterm</li>
+  <li>HW4</li>
+  <li>No self-eval for HW3 due to midterm</li>
 </ul>
 
 </details>
@@ -219,18 +227,20 @@ See canvas for section specific updates and assignment due dates.
 <h3>Topics:</h3>
 <ul>
   <li>Adding interactions to regression models (Monday) </li>
-  <li>Nonlinear models, feature space (Wednesday)</li>
+  <li>Nonlinear models, the concept of feature space  (Wednesday)</li>
+  <li>Model selection, cross validation (Wednesday)</li>
   <li><strong>EXAM</strong> (Friday) </li>
 </ul>
 
 <h3>Reading:</h3>
 <ul>
-  <li>ER: [TBD]</li>
+  <li>[TBD]</li>
 </ul>
 
 <h3>Assignments due:</h3>
 <ul>
   <li>HW5</li>
+  <li>HW4 Self-evaluation</li>
 </ul>
 
 </details>
@@ -256,6 +266,7 @@ See canvas for section specific updates and assignment due dates.
 <h3>Assignments due:</h3>
 <ul>
   <li>HW6</li>
+  <li>HW5 Self-evaluation</li>
 </ul>
 
 </details>
@@ -277,7 +288,8 @@ See canvas for section specific updates and assignment due dates.
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW6</li>
+  <li>HW7</li>
+  <li>HW6 Self-evaluation</li>
 </ul>
 </details>
 
@@ -298,7 +310,8 @@ See canvas for section specific updates and assignment due dates.
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW6</li>
+  <li>HW8</li>
+  <li>HW7 Self-evaluation</li>
 </ul>
 </details>
 
