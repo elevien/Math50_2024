@@ -38,7 +38,8 @@ See <a href="schedule.html">weekly schedule</a> for detials.
 
 <p><span class="important"><strong>Exams:</strong> There will be an in-class midterm quiz and a final. I will provide practice exams and additional practice problems for each one. </span></p>
 
-<p><strong>Exercises:</strong> Your homework is to submit solutions to a set of exercises. You will submit your solutions to Canvas (approximately) every week before I release the solutions. Then, the following week you will self-evaluate (i.e., grade) your solutions and submit the evaluation. You should use the following point scale, which I will elaborate on in class.</p>
+<p><strong>Exercises:</strong> Your homework is to submit solutions to a set of exercises. You will submit your solutions to Canvas (approximately) every week. 
+Then, the following week you will self-evaluate (i.e., grade) your solutions and submit the evaluation. You should use the following point scale, which I will elaborate on in class.</p>
 <ul>
     <li>0 - No work was done, or barely any effort was made. </li>
     <li>1 - You put down partial work, but didn't put much effort in and didn't reach out if you needed help.</li>

@@ -58,7 +58,7 @@ prints out
 3333
 44444
 \end{Verbatim}
-Modify this code to print
+Without using ChatGPT, modify this code to print
 \begin{Verbatim}
 0
 01
@@ -70,6 +70,17 @@ Modify this code to print
 \end{exercise}
 
 
+%--------------------------------------------------------------------------------------------------------------------------------
+ \begin{exercise}[Working with more complex data -- {\bf ChatGPT}]
+ Using ChatGPT, write python code to plot a map of the world with Hanover indicated by a red star. 
+ Then examine this code and answer the following questions: 
+ \begin{itemize}
+ \item How was the data loaded and what variable was it stored in?  Where is the information about the geometric shape of each country stored? Can you print out some of this information? Is there other information that is not used in the plot? 
+ \item Where is the information about the location of Hanover, NH stored? 
+ \item {\bf Without using ChatGPT}, could plot another point at Salt Lake City, UT with a green dot? (you can look up the coordinates). 
+ \end{itemize}
+ 
+ \end{exercise}
 
  
 %--------------------------------------------------------------------------------------------------------------------------------
@@ -139,11 +150,11 @@ def flip_until_two():
 \end{Verbatim}
 
 \begin{enumerate}[label=(\alph*)]
-\item  By changing the code above, write a function rolluntil(n) that rolls a dice until we
-get $n$ ones in a row. You should change the variable names accordingly. We will call this random variable \textcolor{orange}{$R_n$}.
+\item  Without using ChatGPT, by changing the code above, write a function rolluntil(n) that rolls a dice until we
+get $n$ ones in a row. You should change the variable names accordingly. We will call this random variable $R_n$.
 %\item Derive a formula for $P(J=k)$. Hint: it is similar to the geometric distribution. 
-\item  Make a DataFrame where each column represents a value of $n$ from $1$ to $6$ and each row is a simulation from the model  \textcolor{orange}{$R_n$}. There should be $100$ rows.
-\item Make a plot of the maximum and minimum values of \textcolor{orange}{$R_n$} as a function of $n$ on the same plot. You might notice one of these increases much faster than the other.  
+\item  Make a DataFrame where each column represents a value of $n$ from $1$ to $6$ and each row is a simulation from the model $R_n$. There should be $100$ rows.
+\item Make a plot of the maximum and minimum values of $R_n$ as a function of $n$ on the same plot. You might notice one of these increases much faster than the other.  
 \end{enumerate}
 \end{exercise}
 
@@ -199,7 +210,7 @@ Consider the variant of the model discussed in class:
 \begin{enumerate}[label=(\alph*)]
 \item What are the marginal distributions of $Y_A$ and $Y_B$?
 \item Are $Y_A$ and $Y_B$ independent? 
-\item Confirm you answer with simulations. 
+\item Without using ChatGPT, Confirm you answer with simulations. 
 \end{enumerate}
 %Below I've generated monte carlo simulations from the gene model
 %%. Let's pretend you don't know the parameter values (you could figure them out from my code). Supposing you didn't know whether $Y_A$ and $Y_B$ are independent, how would you determine this based on the data?
@@ -260,7 +271,7 @@ Hint: One way to do this is to use Bayes' rule
 
 
 %--------------------------------------------------------------------------------------------------------------------------------
-\begin{exercise}[Covid modeling -- {\bf ungraded}]
+\begin{exercise}[Covid modeling]
 Suppose we are interested in modeling how likely we are to contract covid after a night out. Imagine that you interact with $N$ people. Let $Y_i$ represent whether or not the $i$th person you interacted with has covid and $T_i$ represent whether or not you contract covid from the interaction with the $i$th person. 
 
 Our model is as follows:
@@ -269,6 +280,8 @@ Y_i &\sim {\rm Bernoulli}(1/10)\\
 T_i |(Y_i=1) &\sim {\rm Bernoulli}(1/2)\\
 T_i|(Y_i=0) &\sim {\rm Bernoulli}(0)
 \end{align*}
+
+Answer these questions without ChatGPT. 
 
 \begin{enumerate}[label=(\alph*)]
 \item What is the distribution $T_i$ NOT conditioned on $Y_i$.  That is, what is the marginal distribution of $T_i$?

@@ -79,10 +79,10 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>Expectations and variances and LLN (Monday)</li>
-  <li>Binomial distribution (Monday)</li>
-  <li>Continuous probability distributions and probability density (Wednesday) </li>
-  <li>Central Limit Theorem and Normal distribution (Friday)</li>
+  <li>Expectations and variances, conditional expectation (Monday)</li>
+  <li>Binomial distribution, LLN (Monday)</li>
+  <li><strong>Computation:</strong> Monte Carlo simulation, histogram, numerical illustration of CLT   (Wednesday) </li>
+  <li>Continuous probability distributions and probability density , Central Limit Theorem and Normal distribution (Friday)</li>
 </ul>
 
 <h3>Class material</h3>
@@ -121,7 +121,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>Properties of Normal random variales (Monday)</li>
+  <li>Properties of Normal random variables (Monday)</li>
   <li>Single-predictor regression as conditional model (Monday)</li>
   <li>Correlation coefficients, R-squared, autogregressive models (Wednesday)</li>
   <li>Least squares (Wednesday)</li>
