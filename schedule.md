@@ -222,7 +222,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 6: Nonlinear models </summary>
+<summary>Week 6: Interactions and other features </summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -296,7 +296,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 9: Bayesian Inference and Regularization</summary>
+<summary>Week 9: Bayesian Inference and MCMC</summary>
 
 <h3>Topics:</h3>
 <ul>
