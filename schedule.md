@@ -195,7 +195,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 5: Multiple Predictors <strong>MIDTERM (Oct 14) </strong></summary>
+<summary>Week 5: Multiple Predictors <strong>MIDTERM (Oct 16) </strong></summary>
 
 <h3>Topics:</h3>
 <ul>
