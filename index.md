@@ -10,6 +10,10 @@ logo: logo.png
 <p><strong>Instructor:</strong> Ethan Levien</p>
 <p><strong>Prerequisites:</strong> There are many other paths to prepare you for this course. The important thing is that you have some exposure to probability theory and are comfortable coding.</p>
 
+
+<p><strong>Not registered?</strong> Fill out <a href = "https://docs.google.com/forms/d/e/1FAIpQLSeDYK6TFq0wW0drA5CSWYM1TmOGfsFa5cuiqg51vOd7HUzwJw/viewform?usp=sf_link">this</a> form</p>
+
+
 <p><strong>Course objectives:</strong> This is an introductory/intermediate statistics class with an emphasis on using simulation to explore statistical models. You will learn how to build, fit, and make predictions with regression models. Such models form the basis of many widely used data analysis techniques, including machine learning algorithms. This is an applied course, and we won’t spend much time deriving equations or proving theorems (at least compared to MATH 40 and 70). Instead, we will learn by playing around with real and simulated data. We will challenge the underlying assumptions of a method and see when things “break”. The goal is to help you develop an intuition about statistical inference, which can be generalized to real-world settings where theorems and analytical formulas are not applicable.
 
 See <a href="schedule.html">weekly schedule</a> for detials. 

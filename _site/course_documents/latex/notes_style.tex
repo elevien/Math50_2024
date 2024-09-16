@@ -3,12 +3,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage[legalpaper, margin=1.0in]{geometry}
+\usepackage[margin=1.0in]{geometry}
 \usepackage{fancyvrb}
 \usepackage{cprotect}
 \usepackage{url}
 \usepackage{etoolbox}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[skins,theorems]{tcolorbox}
 \usepackage{enumitem}
 \newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
@@ -23,14 +23,7 @@
 \usepackage[OT1]{fontenc}
 
 
-% fonts
-%\input{ArtNouvc.fd}
-%\newcommand*\initfamily{\usefont{U}{ArtNouvc}{xl}{n}}
-%\usepackage[T1]{fontenc}
-%\usepackage{tgbonum} % change font
 
-%\usepackage[light,condensed,math]{iwona}
-%\usepackage[T1]{fontenc}
 
 % from https://www.pinterest.co.uk/pin/88664686405122253/
 \definecolor{C1}{RGB}{141, 125, 158} %purple
@@ -71,11 +64,11 @@
 
  %  ----------------------------------------------------------------------------
     
-\patchcmd{\section}{\normalfont}{\color{C5}}{}{}
-\patchcmd{\subsection}{\normalfont}{\color{C5}}{}{}
+%\patchcmd{\section}{\normalfont}{\color{C5}}{}{}
+%\patchcmd{\subsection}{\normalfont}{\color{C5}}{}{}
 
 
-\newcommand{\dfn}[1]{{ \color{red}{\underline{#1}}}}
+\newcommand{\dfn}[1]{{\underline{#1}}}
 
 
 \renewcommand{\FancyVerbFormatLine}[1]{\color{gray}{>\,\,#1}}
@@ -99,7 +92,7 @@
 \newtheoremstyle{example}
   {}                % Space above
   {}                % Space below
-  {\color{C6}\slshape} % Theorem body font (default is "\upshape")
+  {\color{C4}\slshape} % Theorem body font (default is "\upshape")
   {}                % Indent amount
   {\bfseries}       % Theorem head font (default is \mdseries)
   {.}               % Punctuation after theorem head (default is no punctuation)

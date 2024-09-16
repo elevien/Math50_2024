@@ -71,60 +71,99 @@
 {\Large {Welcome to Math 50!}}
 \centering
 
+\vspace{1cm}
+For all course information see the \href{https://elevien.github.io/Math50_2024/}{course webpage}.
+
+ \vspace{1cm}
+ \textcolor{red}{Not registered? Fill out form linked on course website (please don't email me)}
+
 
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{What is the course about?}
 
+
+Math 50 is about:
 \begin{itemize}
-\item Math 50 is a course about {\bf extracting and interpreting relationships between variables} using real data. 
-\item {\bf Linear and logistic regression models} are the mathematical frameworks for achieving this.  
+\item  Extracting and interpreting relationships between variables from data. \pause
+\item How do we determine if two variables are related? How can we understand the underlying source of this relationship? 
 \end{itemize}
-\pause
-
-
-
-
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+What type of background do you need to take the course? \pause 
+\begin{itemize}
+\item ``Comfortable'' coding. ChatGPT allowed for HW, but will need to understand simple code on a closed book exam\pause 
+\item Some: Take simple derivatives, integrals, knowing basic matrix operations is helpful, but not required (e.g. multiple a vector by a matrix)\pause 
+\item Not stats background is needed (e.g. can skip Math 10), but it might be helpful.  
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%
+%import numpy as np
+%import matplotlib.pyplot as plt
+%
+%# Generate random samples with two bumps
+%samples = np.concatenate([np.random.normal(0, 0.3, 1000), np.random.normal(2, 0.3, 1000)])
+%
+%# Plot histogram
+%plt.hist(samples, bins=30, alpha=0.7, color='blue', edgecolor='black')
+%}
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Comparison to other courses}
 
 
+\begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{dartmouthstats.png}
+        \caption{Topics covered in similar Dartmouth courses --  work in progress}
+\end{figure}
+    
+ \pause
+
+    
+
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame} 
-\begin{table}[h!]
-\centering
-\begin{tabular}{lll} 
-& Topic & Overlap\\
-\hline
-\hline
-Week 1 & Discrete probability models and simulations & 10, 20, 40, 60   \\
-Week 2  & Sums and CLT  & 20, 40, 60 \\
-Week 3  & Inference & 40, 70  \\
-Week 4  & Regression single predictor & 10 \\
-Week 5  & Regression with multiple predictors & 70  \\
-Week 6  & Relationship to other models, Logistic regression & 70  \\
-Week 7  & Overfitting and regularization & 70  \\
-Week 8  & Bayesian inference &   \\
-\end{tabular}
-\caption{Weekly schedule (see course webpage for details) }
-\label{tab:schedule}
+\begin{frame}
 
-\end{table}
+
+Lot's of overlap, but key differences 
+\begin{itemize}
+\item {\bf Math 40:} Deeper dive into basics. More rigorous math, less coding. 
+\item {\bf Math 70:} More broadly focused on multivariate stats (including clustering, PCA). Less emphasis on computational/coding, hands on examples. Less connection to ML. 
+\item {\bf Math 74:} Less probabilistic focus, more broadly focused on ML methods (including kernel methods and SVM). More focus on prediction vs. inference. 
+\end{itemize}
+
+\pause
+For MDS, but take 40,70 and 50. 40 before 70. 
+
+
+
 \end{frame}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame} 
-\frametitle{Resources}
+
+\begin{frame}
+
+In addition to the specific topics mentioned above, there are some general themes which will guide how we explore the world of regression modeling
+\begin{itemize}
+\item {\bf Correlation vs. causation:} When can we tell the difference? 
+\item {\bf Bayesian vs. frequentist:} Different ways of seeing the same thing?  
+\item {\bf Classical statistics vs. machine learning:} Is statistics ``just'' machine learning? 
+\item {\bf Experimental mindset:}  Learn by running computational experiments rather than doing complex mathematical calculations 
+\end{itemize}
+
 
 \end{frame}
 
@@ -132,21 +171,35 @@ Week 8  & Bayesian inference &   \\
 \begin{frame}
 \frametitle{Course structure}
 
+{\bf Class time:} 
+\begin{itemize}
+\item {\bf Lecture:} Usually Monday/Wednesday. {\bf No phones or computers please!}
+\item {\bf Hands on coding:} Usually Friday, sometimes Wednesday, bring laptop, or tablet, but don't need to -- see schedule for which day. 
+\item {\bf Exams:} Midterm and Final in class. 
+\end{itemize}
+
+
+\pause 
+{\bf Outside of class:} 
+\begin{itemize}
+\item Readings $\approx$ 3-4 hours/week. 
+\item Supplemental resources (e.g. videos) $\approx$ 1 hours/week
+\item Practice/reflection (HW, practice problems, practice exams) $\approx$ 5-8 hours/week 
+\end{itemize}
+
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Policies}
 
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame} 
 \frametitle{How to succeed in this course}
 \begin{itemize}
-\item 
+\item {\bf Do the readings:} Don't just read, ask yourself questions, work through examples, try to challenge claims make in the text. 
+\item {\bf Come to class:} Don't look at your phone during class. Ask questions. 
+\item {\bf Come to office hours:} Helpful if you have concrete questions, but okay if not. 
+\item {\bf Have an open mind:} Just because you've seen something in a different course doesn't mean you won't benefit from thinking deeply about it again. 
 \end{itemize}
 
 \end{frame}
@@ -156,11 +209,13 @@ Week 8  & Bayesian inference &   \\
 \frametitle{What to expect from me}
 
 \begin{itemize}
-\item {\bf Availability:} Office hours and xhours (4 hours total outside of class)
-\item {\bf Responsiveness:} 24 hours on weekdays. If you'd like to request an extension, plan ahead
-\item {\bf Grading:} No detailed grading of problem sets (graders will review for completeness). Detailed grading of midterm within 1 week. 
-\item {\bf Material:} Course notes should be understood as a summary of material covered. Refer to textbooks/readings for technical details. 
+\item {\bf Availability:} Office hours and xhours (4 hours total outside of class available to both sections).
+\item {\bf Responsiveness:} I will respond in 24 hours on weekdays. 
+%\item {\bf Grading:} Detailed grading of midterm within 2 weeks (hopefully 1). No detailed grading of problem sets (graders will review for completeness). 
+\item {\bf Material:} Notes to supplement the textbook. 
+%I put a lot of thought and effort to design an novel course which caters to the diverse needs to students who take math 50; however, over the years I've realized I don't have the time to prepare original material which is as polished as students like. This why I'm heavily relying on the two textbooks this term.   My course notes should be understood as a summary of material covered. Refer to textbooks/readings for technical details. 
 \end{itemize}
+
 
 \end{frame}
 
