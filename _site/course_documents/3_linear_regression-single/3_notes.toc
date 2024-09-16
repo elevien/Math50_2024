@@ -1,4 +1,0 @@
-\contentsline {section}{\tocsection {}{1}{Properties of Normal random variables}}{1}{section.1}%
-\contentsline {section}{\tocsection {}{2}{Regression modeling}}{2}{section.2}%
-\contentsline {subsection}{\tocsubsection {}{2.1}{Least square interpretation}}{4}{subsection.2.1}%
-\contentsline {section}{\tocsection {}{}{References}}{4}{section*.2}%

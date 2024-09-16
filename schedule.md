@@ -34,7 +34,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <h3>Class material</h3>
 <ul>
   <!-- <li> <a href = "/course_documents/1_discrete_models/1_notes.pdf">Notes</a></li> -->
-  <li> Class notes </li>
+  <li> <strong>Class notes: </strong><a href = "course_documents/Math50_week1M.pdf">Monday</a> </li>
   <li> Colab notebook </li>
 </ul>
 
