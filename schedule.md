@@ -109,7 +109,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW1</li>
+  <li><a href = "/course_documents/Math50_hw1.pdf">HW1</a> </li>
 </ul>
 
 </details>
