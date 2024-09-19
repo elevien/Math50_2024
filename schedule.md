@@ -101,10 +101,18 @@ Please see canvas for section specific updates and assignment due dates. This sc
     <li>3.3 (Variance and covariance)</li>
     <li><i>2.3 (Discrete distributions) </i></li>
     <li>2.4 (Continuous)</li>
-    <li><i>4.2.1/4.4.1 (Law of large numbers/Central Limit Theorem):</i> You will not need to know the more technical definitions in the textbook, only the intuitive definitions in the book.  </li>
+    <li><i>4.2.1/4.4.1 (Law of large numbers/Central Limit Theorem):</i> You will not need to know the more technical definitions in the textbook, only the intuition behind these results. The CLT theorem video referenced below is extremely helpful for this.   </li>
   </ul>
   </li>
 </ul>
+
+  <li><strong>Addition resources</strong> (from 3Blue1Brown):
+  <ul>
+  <li><a href = "https://www.youtube.com/watch?v=U_85TaXbeIo">   Simple proof of Bayes' Theorem </a> </li>
+  <li><a href = "https://www.youtube.com/watch?v=8idr1WZ1A7Q"> Binomial distribution </a> </li>
+  <li><a href = "https://www.youtube.com/watch?v=zeJD6dqJ5lo"> Central Limit Theorem </a> </li>
+  </ul>
+  </li>
 
 
 <h3>Assignments due:</h3>
