@@ -87,7 +87,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Class material</h3>
 <ul>
-  <li> <a href = "/course_documents/2_iidsums_continuous/2_notes.pdf">Notes</a></li>
+  <li> <strong>Class notes: </strong><a href = "course_documents/Math50-w2M_DRAFT.pdf">Monday ROUGH DRAFT (9/23) </a></li>
   <li> <a href = "/course_documents/2_iidsums_continuous/2_notes.pdf">Colab notebook</a></li>
 </ul>
 
