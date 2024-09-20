@@ -34,8 +34,8 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <h3>Class material</h3>
 <ul>
   <!-- <li> <a href = "/course_documents/1_discrete_models/1_notes.pdf">Notes</a></li> -->
-  <li> <strong>Class notes: </strong><a href = "course_documents/Math50_week1M.pdf">Monday (8/16)</a>, <a href = "course_documents/Math50-w1W.pdf">Wednesday (9/18)</a> </li>
-  <li> Colab notebook </li>
+  <li> <strong>Class notes: </strong><a href = "course_documents/Math50_week1M.pdf">Monday (9/16)</a>, <a href = "course_documents/Math50-w1W.pdf">Wednesday (9/18)</a> </li>
+  <li> <a href = "https://colab.research.google.com/drive/1PKX55UnkkO2qQFPdcdcg06rRYGBjXOeC?usp=sharing">Colab notebook (9/20)</a>  </li>
 </ul>
 
 
@@ -108,9 +108,9 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
   <li><strong>Addition resources</strong> (from 3Blue1Brown):
   <ul>
-  <li><a href = "https://www.youtube.com/watch?v=U_85TaXbeIo">   Simple proof of Bayes' Theorem </a> </li>
-  <li><a href = "https://www.youtube.com/watch?v=8idr1WZ1A7Q"> Binomial distribution </a> </li>
-  <li><a href = "https://www.youtube.com/watch?v=zeJD6dqJ5lo"> Central Limit Theorem </a> </li>
+  <li><a href = "https://www.youtube.com/watch?v=U_85TaXbeIo">Simple proof of Bayes' Theorem</a> </li>
+  <li><a href = "https://www.youtube.com/watch?v=8idr1WZ1A7Q">Binomial distribution</a> </li>
+  <li><a href = "https://www.youtube.com/watch?v=zeJD6dqJ5lo">Central Limit Theorem</a> </li>
   </ul>
   </li>
 
