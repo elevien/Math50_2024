@@ -28,7 +28,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <ul>
   <li>Familiarity with basic concepts in probability (events, probability distribution) (Monday)</li>
   <li>Independence and conditioning  (Wednesday)</li>
-  <li><strong>Computation:</strong>  Basics of Python programming (arrays, Dataframes, plotting), The concept of Monte Carlo simulation (Friday)</li>
+  <li><strong>Computation:</strong>  Basics of Python programming (arrays, <s>Dataframes</s> (moved to week 3), plotting), The concept of Monte Carlo simulation (Friday)</li>
 </ul>
 
 <h3>Class material</h3>
@@ -133,7 +133,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
   <li>Single-predictor regression as conditional model (Monday)</li>
   <li>Correlation coefficients, R-squared, autogregressive models (Wednesday)</li>
   <li>Least squares (Wednesday)</li>
-  <li><strong>Computation:</strong> Simulating regression models and working with tabular data (Friday)</li>
+  <li><strong>Computation:</strong> Simulating regression models and working with tabular data (Dataframes) (Friday)</li>
 </ul>
 
 <h3>Class material</h3>
