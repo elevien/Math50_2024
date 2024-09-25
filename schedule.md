@@ -87,17 +87,19 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Class material</h3>
 <ul>
-  <li> <strong>Class notes: 
-    </strong><a href = "course_documents/Math50-w2M_DRAFT.pdf">Monday ROUGH DRAFT (9/23) </a>, 
-<<<<<<< HEAD
-    <a href = "course_documents/Math50-w2M_CLASS.pdf">Monday Class (9/23) </a>, 
-=======
-    <a href = "course_documents/Math50-w2M-CLASS.pdf">Monday Class (9/23) </a>, 
->>>>>>> origin/main
-    <a href = "course_documents/Math50-w2F_DRAFT.pdf">Friday ROUGH DRAFT (9/27) </a>
-    </li>
+ <li><strong>Class notes: </strong>
+ <ul>
+ <li><a href = "course_documents/Math50-w2M_DRAFT.pdf">Monday ROUGH DRAFT (9/23) </a></li> 
+ <li><a href = "course_documents/Math50-w2M_CLASS.pdf">Monday Class (9/23) </a></li>
+<li><a href = "course_documents/Math50-w2F_DRAFT.pdf">Friday ROUGH DRAFT (9/27) </a></li>
+  </ul></li>
+
+ <li><strong>Code: </strong>
+ <ul>
   <li> <a href = "https://colab.research.google.com/drive/1WdyY-RixRxbewVAsfGGNoIB4UQlfsxMS?usp=drive_link">Colab notebook (9/25)</a></li>
+</ul></li>
 </ul>
+
 
 
 <h3>Reading:</h3>
@@ -146,8 +148,17 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Class material</h3>
 <ul>
-  <li> <a href = "">Notes</a></li>
-  <li> <a href = "">Colab notebook</a></li>
+  <li> <strong>Class notes:</strong>
+    <ul>
+    <li><a href = "course_documents/Math50_w3-OLD-2023.pdf">Class notes from 2023</a> </li>
+    <li><a href = "">Monday</a> </li>
+    </ul>
+    </li>
+  <li><strong>Code:</strong>
+  <ul>
+   <li><a href = "">Colab notebook</a></li>
+   </ul>
+   </li>
 </ul>
 
 <h3>Reading:</h3>
