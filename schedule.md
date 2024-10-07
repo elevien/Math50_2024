@@ -192,7 +192,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <ul>
   <li> <strong>Computation:</strong> Finish regression examples in python and talk about coefficient of determination </li> 
   <li>Properties of Estimators, sample distribution (Wednesday) </li>
-  <li>Confidence intervals (Wednesday) </li>
+  <li>Confidence intervals and hypothesis testing (Wednesday) </li>
   <li><strong>Computation:</strong> Hands on examples in <code>statsmodels</code> (Friday)</li>
 </ul>
 
@@ -246,7 +246,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>Hypothesis testing (Monday)</li>
+  <li>Midterm review (Monday)</li>
   <li>Introduction to regression with multiple predictors (Friday)</li>
   <li>Interpretation of regression coefficients</li>
   <li><strong>Computation:</strong> Performing multivariate regression in <code>statsmodels</code> and data visualization (Friday)</li>
