@@ -273,7 +273,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li> Colinearity (Monday)
+  <li> Colinearity (Monday)</li>
   <li> Adding interactions to regression models (Monday) </li>
   <li> Nonlinear models, the concept of feature space  (Wednesday)</li>
   <li> Model selection, cross validation (Wednesday)</li>
