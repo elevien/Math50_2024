@@ -157,7 +157,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
     </li>
   <li><strong>Code:</strong>
   <ul>
-   <li><a href = "">Colab notebook</a></li>
+   <li><a href ="https://colab.research.google.com/drive/1nkuxp_giX9P7L-EP4dnwn_xS8r7rckSv?usp=sharing">Colab notebook (10/7)</a></li>
    </ul>
    </li>
 </ul>
@@ -190,26 +190,25 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>Properties of Estimators (Monday) </li>
-  <li>Confidence intervals (Monday) </li>
-  <li>Hypothesis testing (Wednesday)</li>
+  <li> <strong>Computation:</strong> Finish regression examples in python and talk about coefficient of determination </li> 
+  <li>Properties of Estimators, sample distribution (Wednesday) </li>
+  <li>Confidence intervals (Wednesday) </li>
   <li><strong>Computation:</strong> Hands on examples in <code>statsmodels</code> (Friday)</li>
 </ul>
 
 <h3>Reading:</h3>
 <ul>
-<li> <strong>ER (optional, more technical treatment):</strong>
-  <ul>
-    <li>6.1 </li>
-    <li>6.3  </li>
-  </ul>
-  </li>
 <li><strong><a href = "https://users.aalto.fi/~ave/ROS.pdf">Regression and Other stories </a></strong>
   <ul>
-  <li>Chapter 4: Especially 4.2 and 4.4</li>
+  <li>Chapter 4: Read the entire chapter (it's not too technical), but 4.2 and 4.4 are especially important. </li>
   </ul>
 </li>
-<li> <strong>ISP:</strong>
+<li> <strong>ER (OPTIONAL): These are optional if you would prefer a more technical treatment. </strong>
+  <ul>
+    <li>6.1 and 6.3</li>
+  </ul>
+  </li>
+<li> <strong>ISP  (OPTIONAL): This is helpful if you would like additional examples in Python.</strong>
   <ul>
     <li>3.1 (Linear regression)  </li>
   </ul>
@@ -221,6 +220,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
   <li> <strong>Class notes:</strong>
     <ul>
     <li><a href = "course_documents/Math50_w4-OLD-2023.pdf">Class notes from 2023</a> </li>
+    <li><a href = "course_documents/Math50-w4MW_DRAFT.pdf">Monday and Wednesday (10/7,10/9) DRAFT </a> </li>
     </ul>
     </li>
   <li><strong>Code:</strong>
@@ -232,7 +232,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW3</li>
+  <li>HW3 Due date pushed to Week 5</li>
   <li>HW2 Self-evaluation</li>
 </ul>
 
@@ -246,9 +246,10 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>Collinearity </li>
+  <li>Hypothesis testing (Monday)</li>
+  <li>Introduction to regression with multiple predictors (Friday)</li>
   <li>Interpretation of regression coefficients</li>
-  <li><strong>Computation:</strong> Performing multivariate regression in <code>statsmodels</code> and data visualization (Wednesday)</li>
+  <li><strong>Computation:</strong> Performing multivariate regression in <code>statsmodels</code> and data visualization (Friday)</li>
 </ul>
 
 <h3>Reading:</h3>
@@ -259,8 +260,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <h3>Assignments due:</h3>
 <ul>
   <li>Midterm</li>
-  <li>HW4</li>
-  <li>No self-eval for HW3 due to midterm</li>
+  <li><a href = "course_documents/Math50_hw3.pdf">HW3</a> </li>
 </ul>
 
 </details>
@@ -273,9 +273,10 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>Adding interactions to regression models (Monday) </li>
-  <li>Nonlinear models, the concept of feature space  (Wednesday)</li>
-  <li>Model selection, cross validation (Wednesday)</li>
+  <li> Colinearity (Monday)
+  <li> Adding interactions to regression models (Monday) </li>
+  <li> Nonlinear models, the concept of feature space  (Wednesday)</li>
+  <li> Model selection, cross validation (Wednesday)</li>
   <li><strong>EXAM</strong> (Friday) </li>
 </ul>
 
