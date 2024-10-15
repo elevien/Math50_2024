@@ -242,7 +242,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 5: $p$-values for regression, intro to multiple predictors <strong>MIDTERM (Oct 16) </strong></summary>
+<summary>Week 5: p-values for regression and hypothesis testing <strong>MIDTERM (Oct 16) </strong></summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -253,7 +253,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Reading:</h3>
 <ul>
-  <li>[TBD]</li>
+  <li>No new reading</li>
 </ul>
 
 <h3>Assignments due:</h3>
