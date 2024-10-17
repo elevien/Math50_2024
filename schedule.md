@@ -275,8 +275,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <ul>
   <li> Colinearity (Monday)</li>
   <li> Adding interactions to regression models (Monday) </li>
-  <li> Nonlinear models, the concept of feature space  (Wednesday)</li>
-  <li><strong>EXAM</strong> (Friday) </li>
+  <li> Nonlinear models, the concept of feature space  (Wednesday/Friday)</li>
 </ul>
 
 <h3>Reading:</h3>
