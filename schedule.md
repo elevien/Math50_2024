@@ -300,7 +300,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <ul>
   <li> <strong>Class notes:</strong>
     <ul>
-    <li><a href = "course_documents/Math50-w6-OLD-2023.pdf">Class notes from 2023 (code linked here)</a> </li>
+    <li><a href = "course_documents/Math50-w6.pdf">Class notes from 2023 (code linked here). I will follow these closely</a> </li>
     </ul>
     </li>
 </ul>
