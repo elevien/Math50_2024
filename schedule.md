@@ -329,7 +329,8 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <h3>Reading:</h3>
 <ul>
 
-  <li><a href = "course_documents/Math50_w7_DRAFT.pdf">Draft of class notes</a> </li>
+  <li><a href = "course_documents/Math50_w7M_DRAFT.pdf">Draft of class notes -- Part 1</a> </li>
+   <li><a href = "course_documents/Math50_w7WF_DRAFT.pdf">Draft of class notes -- Part 2</a> </li>
 </ul>
 
 <h3>Assignments due:</h3>
