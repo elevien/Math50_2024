@@ -273,13 +273,11 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li> Introduction to regression with multiple predictors (Monday)</li>
-  <li> Interpreting regression coefficients (Monday) </li>
-  <li> Catagorical predictors/dummy variables (Wednesday) </li>
-  <li> Simpsons paradox (Wednesday) </li>
-  <li> Residual plots (Wednesday/Friday) </li>
+  <li> No class monday</li>
+  <li> Introduction to regression with multiple predictors (Wednesday)</li>
+  <li> Interpreting regression coefficients (Wednesday) </li>
+  <li> <strong>Computation:</strong> Residual plots (Friday) </li>
   <li> <strong>Computation:</strong>  Examples in python (Wednesday) </li>
-  <li> <strong>Computation:</strong>  Adding interactions  (Friday)</li>
 </ul>
 
 <h3>Reading:</h3>
@@ -316,19 +314,22 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 7: Features, Overfitting and Regularization</summary>
+<summary>Week 7: More with multiple predictors, overfitting, nonlinear features</summary>
 
 <h3>Topics:</h3>
 <ul>
-  <li><strong>Computation:</strong> Adding nonlinear features to regression models (Moday) </li>
+
+  <li> Simpsons paradox (Monday) </li>
+  <li> <strong>Computation:</strong> Catagorical predictors/dummy variables (Modany) </li>
+  <li> <strong>Computation:</strong>  Adding nonlinear features to regression models (Moday) </li>
   <li>Bias variance decomposition,overfitting (Wednesday) </li>
-  <li>Categorical regression (Wednesday)</li>
   <li>Overparamaterized models/Machine learning vs. statistics (Friday)</li>
 </ul>
 
 <h3>Reading:</h3>
 <ul>
-  <li>See my notes</li>
+
+  <li><a href = "course_documents/Math50_w7_DRAFT.pdf">Draft of class notes</a> </li>
 </ul>
 
 <h3>Assignments due:</h3>
