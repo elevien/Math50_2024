@@ -297,7 +297,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <ul>
   <li> <strong>Class notes:</strong>
     <ul>
-    <li><a href = "course_documents/Math50-w6.pdf">Class notes from 2023. </a> </li>
+    <li><a href = "course_documents/Math50-w6.pdf">My notes</a> </li>
     <li><a href ="https://colab.research.google.com/drive/1f7o12K0n7lEhE-SXrlDG8x6QOh4rqrDt?usp=sharing">Colab notebook (10/25) </a></li>
     </ul>
     </li>
