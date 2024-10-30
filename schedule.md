@@ -328,7 +328,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Reading:</h3>
 <ul>
-  <li><a href = "course_documents/Math50_w7.pdf">My notes</a> </li>
+  <li><a href = "course_documents/Math50-w7.pdf">My notes</a> </li>
   <li> <strong>ISP:</strong> Sections 3.3.1 and 3.3.2 </li>
 </ul>
 
@@ -354,7 +354,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Reading:</h3>
 <ul>
-  <li><a href = "course_documents/Math50_w8.pdf">My notes</a> </li>
+  <li><a href = "course_documents/Math50-w8.pdf">My notes</a> </li>
   <li> <strong>ISP:</strong> Sections 2.1 and 2.2. I won't follow these closely, but there is a lot of overlap. </li>
 </ul>
 
