@@ -328,7 +328,9 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Reading:</h3>
 <ul>
-  <li><a href = "course_documents/Math50-w7.pdf">My notes</a> </li>
+  <li><a href = "course_documents/Math50-w7.pdf">My typed notes</a> </li>
+  <li><a href = "course_documents/Math50-w7M_Lecture.pdf">Monday (10/28) CLASS</a> </li>
+  <li><a href = "course_documents/Math50-w7W_Lecture.pdf">Wednesday (10/30) CLASS</a> </li>
   <li> <strong>ISP:</strong> Sections 3.3.1 and 3.3.2 </li>
 </ul>
 
