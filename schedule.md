@@ -314,7 +314,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 7: More with multiple predictors, overfitting, nonlinear features</summary>
+<summary>Week 7: More with multiple predictors </summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -322,7 +322,6 @@ Please see canvas for section specific updates and assignment due dates. This sc
   <li> Simpsons paradox (Monday) </li>
   <li> Catagorical predictors/dummy variables (Monday/Wednesday) </li>
   <li> Interactions (Wednesday) </li>
-  <li> Fourier series (Wednesday) </li>
   <li> <strong>Computation:</strong> Hands on examples in statsmodels </li>
 </ul>
 
@@ -332,11 +331,17 @@ Please see canvas for section specific updates and assignment due dates. This sc
   <li><a href = "course_documents/Math50-w7M_Lecture.pdf">Monday (10/28) CLASS</a> </li>
   <li><a href = "course_documents/Math50-w7W_Lecture.pdf">Wednesday (10/30) CLASS</a> </li>
   <li> <strong>ISP:</strong> Sections 3.3.1 and 3.3.2 </li>
+  <li><strong><a href = "https://users.aalto.fi/~ave/ROS.pdf">Regression and Other stories </a></strong>
+  <ul>
+  <li>Section 12.1 and 12.2 (linear transformations of predictors)   </li>
+  <li>Section 11.3 (residual plots)</li>
+  </ul>
+</li>
 </ul>
 
 <h3>Assignments due:</h3>
 <ul>
-  <li><a href = "course_documents/Math50_hw4.pdf">HW4</a></li>
+  <li><a href = "course_documents/Math50_hw4.pdf">HW4 (deadline extended -- see canvas)</a></li>
   <li>No Self-evaluation due</li>
 </ul>
 
@@ -345,26 +350,38 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 8: Model assessment and machine learning</summary>
+<summary>Week 8: Model assessment and beyond linear regression</summary>
 
 <h3>Topics:</h3>
 <ul>
-    <li> Bias variance tradeoff, overfitting</li>
-    <li> Machine learning vs. statistics and inference vs. prediction </li>
-    <li> begin bayesian inference if there is time </li>
+    <li> Bias variance tradeoff, overfitting, double descent (Monday)</li>
+    <li> Cross validation (Monday) </li>
+    <li> Regularization (Wednesday) </li>
+    <li> Fourier series (Wednesday) </li>
+    <li> Logistic regression/classification problems (Friday if there is time) </li>
 </ul>
 
 <h3>Reading:</h3>
 <ul>
-  <li><a href = "course_documents/Math50-w8.pdf">My notes</a> </li>
-  <li> <strong>ISP:</strong> Sections 2.1 and 2.2. I won't follow these closely, but there is a lot of overlap. </li>
+  <li> <a href="course_documents/Math50-w8.pdf">My notes (DRAFT)</a> </li>
+  <li> <strong>ISLP:</strong> Sections 2.1 and 2.2 (overfitting and bias variance tradeoff) </li>
+  <li> <strong>ISLP:</strong> Section 6.2.1 (regularization) </li>
+  <li> <strong>ISLP:</strong> Sections 4.1, 4.2, 4.3 (logistic regression) </li>
+  <li> <strong>ISLP:</strong> There is a section on cross validation but it might be a bit confusing since we didn't cover logistic regression </li>
+  <li> <strong><a href="https://users.aalto.fi/~ave/ROS.pdf">Regression and Other Stories</a></strong>: Section 11.8 (optional additional explanation of CV) </li>
+</ul>
+
+<h3>Additional resources</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=r6sGWTCMz2k">Fourier series (from 3Blue1Brown)</a></li>
+  <li><a href="https://mlu-explain.github.io/double-descent/">Double descent</a></li>
 </ul>
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW5</li>
   <li>HW4 Self-evaluation</li>
 </ul>
+
 </details>
 
 <!-- ################################################################################################################ -->
@@ -374,13 +391,21 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>[TBD]</li>
+  <li>Priors</li>
+  <li>Laplace rule of succesion</li>
+  <li>Bayesian linear regression and regularization</li>
 </ul>
 
 <h3>Reading:</h3>
 <ul>
   <li>[TBD]</li>
 </ul>
+
+<h3>Assignments due:</h3>
+<ul>
+  <li>HW5</li>
+</ul>
+
 
 </details>
 
@@ -393,7 +418,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Review:</h3>
 <ul>
-  <li>[TBD]/li>
+  <li>[TBD]</li>
 </ul>
 
 
