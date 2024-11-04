@@ -328,8 +328,8 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <h3>Reading:</h3>
 <ul>
   <li><a href = "course_documents/Math50-w7.pdf">My typed notes</a> </li>
-  <li><a href = "course_documents/Math50-w7M_Lecture.pdf">Monday (10/28) CLASS</a> </li>
-  <li><a href = "course_documents/Math50-w7W_Lecture.pdf">Wednesday (10/30) CLASS</a> </li>
+  <li><a href = "course_documents/Math50-w7M-Lecture.pdf">Monday (10/28) CLASS</a> </li>
+  <li><a href = "course_documents/Math50-w7W-Lecture.pdf">Wednesday (10/30) CLASS</a> </li>
   <li> <strong>ISP:</strong> Sections 3.3.1 and 3.3.2 </li>
   <li><strong><a href = "https://users.aalto.fi/~ave/ROS.pdf">Regression and Other stories </a></strong>
   <ul>
@@ -363,9 +363,9 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Reading:</h3>
 <ul>
-  <li> <a href="course_documents/Math50-w8.pdf">My notes (DRAFT)</a> </li>
+  <li> <a href="course_documents/Math50-w8.pdf">My notes (DRAFT -- covers cross validation, overfitting, Fourier series)</a> </li>
   <li> <strong>ISLP:</strong> Sections 2.1 and 2.2 (overfitting and bias variance tradeoff) </li>
-  <li> <strong>ISLP:</strong> Section 6.2.1 (regularization) </li>
+  <li> <strong>ISLP:</strong> Section 6.2 (regularization) </li>
   <li> <strong>ISLP:</strong> Sections 4.1, 4.2, 4.3 (logistic regression) </li>
   <li> <strong>ISLP:</strong> There is a section on cross validation but it might be a bit confusing since we didn't cover logistic regression </li>
   <li> <strong><a href="https://users.aalto.fi/~ave/ROS.pdf">Regression and Other Stories</a></strong>: Section 11.8 (optional additional explanation of CV) </li>
