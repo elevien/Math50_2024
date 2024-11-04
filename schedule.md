@@ -361,9 +361,10 @@ Please see canvas for section specific updates and assignment due dates. This sc
     <li> Logistic regression/classification problems (Friday if there is time) </li>
 </ul>
 
-<h3>Reading:</h3>
+<h3>Reading/notes:</h3>
 <ul>
   <li> <a href="course_documents/Math50-w8.pdf">My notes (DRAFT -- covers cross validation, overfitting, Fourier series)</a> </li>
+  <li> <a href="course_documents/Math50-w8M_CLASS.pdf">Monday (11/4) CLASS</a> </li>
   <li> <strong>ISLP:</strong> Sections 2.1 and 2.2 (overfitting and bias variance tradeoff) </li>
   <li> <strong>ISLP:</strong> Section 6.2 (regularization) </li>
   <li> <strong>ISLP:</strong> Sections 4.1, 4.2, 4.3 (logistic regression) </li>
@@ -387,13 +388,14 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 9: Bayesian Inference and MCMC</summary>
+<summary>Week 9/10: Bayesian Inference and MCMC</summary>
 
 <h3>Topics:</h3>
 <ul>
   <li>Priors</li>
   <li>Laplace rule of succesion</li>
-  <li>Bayesian linear regression and regularization</li>
+  <li>Relationship between bayesian linear regression and regularization</li>
+  <li>The kernel trick</li>
 </ul>
 
 <h3>Reading:</h3>
@@ -403,7 +405,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Assignments due:</h3>
 <ul>
-  <li>HW5</li>
+  <li><a href = "course_documents/Math50_hw5.pdf">HW5 due last day of class</a></li>
 </ul>
 
 
