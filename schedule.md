@@ -325,7 +325,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
   <li> <strong>Computation:</strong> Hands on examples in statsmodels </li>
 </ul>
 
-<h3>Reading:</h3>
+<h3>Reading/notes:</h3>
 <ul>
   <li><a href = "course_documents/Math50-w7.pdf">My typed notes</a> </li>
   <li><a href = "course_documents/Math50-w7M-Lecture.pdf">Monday (10/28) CLASS</a> </li>
@@ -363,8 +363,9 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Reading/notes:</h3>
 <ul>
-  <li> <a href="course_documents/Math50-w8.pdf">My notes (DRAFT -- covers cross validation, overfitting, Fourier series)</a> </li>
+  <li> <a href="course_documents/Math50-w8.pdf">My typed notes (DRAFT -- covers cross validation, overfitting, Fourier series)</a> Colab notebook is linked within. </li>
   <li> <a href="course_documents/Math50-w8M_CLASS.pdf">Monday (11/4) CLASS</a> </li>
+  <li> <a href="course_documents/Math50-w8W_CLASS.pdf">Monday (11/6) CLASS</a> (I ended class on Wednesday by introducing regularization) </li>
   <li> <strong>ISLP:</strong> Sections 2.1 and 2.2 (overfitting and bias variance tradeoff) </li>
   <li> <strong>ISLP:</strong> Section 6.2 (regularization) </li>
   <li> <strong>ISLP:</strong> Sections 4.1, 4.2, 4.3 (logistic regression) </li>
