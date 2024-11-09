@@ -356,26 +356,24 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <ul>
     <li> Bias variance tradeoff, overfitting, double descent (Monday)</li>
     <li> Cross validation (Monday) </li>
-    <li> Regularization (Wednesday) </li>
-    <li> Fourier series (Wednesday) </li>
-    <li> Logistic regression/classification problems (Friday if there is time) </li>
+    <li> Regularization (Wednesday/Friday) </li>
+    <li> Laplace rule of succession </li>
 </ul>
 
 <h3>Reading/notes:</h3>
 <ul>
-  <li> <a href="course_documents/Math50-w8.pdf">My typed notes (DRAFT -- covers cross validation, overfitting, Fourier series)</a> Colab notebook is linked within. </li>
+  <li> <a href="course_documents/Math50-w8.pdf">My typed notes from 2023 (DRAFT -- covers cross validation, overfitting, Fourier series)</a> Colab notebook is linked within. </li>
   <li> <a href="course_documents/Math50-w8M_CLASS.pdf">Monday (11/4) CLASS</a> </li>
-  <li> <a href="course_documents/Math50-w8W_CLASS.pdf">Monday (11/6) CLASS</a> (I ended class on Wednesday by introducing regularization) </li>
+  <li> <a href="course_documents/Math50-w8W_CLASS.pdf">Wednesday/Friday (11/6 and 11/8) CLASS</a> (I ended class on Friday with some examples of regularization) </li>
   <li> <strong>ISLP:</strong> Sections 2.1 and 2.2 (overfitting and bias variance tradeoff) </li>
   <li> <strong>ISLP:</strong> Section 6.2 (regularization) </li>
-  <li> <strong>ISLP:</strong> Sections 4.1, 4.2, 4.3 (logistic regression) </li>
+  <li> <s><strong>ISLP:</strong> Sections 4.1, 4.2, 4.3 (logistic regression)</s> </li>
   <li> <strong>ISLP:</strong> There is a section on cross validation but it might be a bit confusing since we didn't cover logistic regression </li>
   <li> <strong><a href="https://users.aalto.fi/~ave/ROS.pdf">Regression and Other Stories</a></strong>: Section 11.8 (optional additional explanation of CV) </li>
 </ul>
 
 <h3>Additional resources</h3>
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=r6sGWTCMz2k">Fourier series (from 3Blue1Brown)</a></li>
   <li><a href="https://mlu-explain.github.io/double-descent/">Double descent</a></li>
 </ul>
 
@@ -393,16 +391,32 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Topics:</h3>
 <ul>
-  <li>Priors</li>
-  <li>Laplace rule of succesion</li>
+  <li>Fourier models/time series data (Monday) </li>
+  <li>Priors (Wednesday)</li>
+  <li>Laplace rule of succesion from Bayesian perspective (Wednesday)</li>
   <li>Relationship between bayesian linear regression and regularization</li>
-  <li>The kernel trick</li>
+  <li>The kernel trick, other topics? </li>
 </ul>
 
-<h3>Reading:</h3>
+<h3>Reading/notes:</h3>
 <ul>
-  <li>[TBD]</li>
+  <li> <strong>ER:</strong>
+  <ul>
+    <li>7.1 (Priors and posterior) -- Focus on example 7.1.1 and try following/reproducing the calculations with alpha=beta=1 (so the beta distribution, which we haven't discussed, becomes a uniform distribution which you are very familiar with).   </li>
+    <li>10.3.3  (Bayesian linear regression) -- Optional</li>
+  </ul>
+  </li>
+  <li> <strong> ISLP:</strong> Section 6.2, subsection titled "Bayesian Interpretation of Ridge Regression and the Lasso"</li>
 </ul>
+
+<h3>Additional resources</h3>
+<ul>
+  <li><a href= "https://www.quantstart.com/articles/Bayesian-Inference-of-a-Binomial-Proportion-The-Analytical-Approach/"> Bayesian inference for bernoulli trials </a></li>
+  <li><a href="https://www.youtube.com/watch?v=HZGCoVF3YvM">Bayesian inference  (from 3Blue1Brown, there are many other great videos on youtube)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=r6sGWTCMz2k">Fourier series (from 3Blue1Brown), just for fun</a></li>
+  <li><a href="https://mlu-explain.github.io/double-descent/">Double descent</a></li>
+</ul>
+
 
 <h3>Assignments due:</h3>
 <ul>
