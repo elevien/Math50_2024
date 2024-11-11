@@ -9,6 +9,7 @@ logo: logo.png
 This schedule is subject to changes throughout the course at my discretion. Readings will be finalized the Friday before they are covered in class.  The textbooks references are: 
 * <strong>ER:</strong> Evans, Michael J., and Jeffrey S. Rosenthal. Probability and statistics: The science of uncertainty. Macmillan, 2004.
 * <strong>ISLP:</strong> James, Gareth, et al. An introduction to statistical learning: With applications in python. Springer Nature, 2023.
+* <strong>ROS:</strong> Gelman, Andrew, Jennifer Hill, and Aki Vehtari. Regression and other stories. Cambridge University Press, 2021.
 <!-- * <strong>ROS:</strong> Gelman, Andrew, Jennifer Hill, and Aki Vehtari. Regression and other stories. Cambridge University Press, 2021. -->
 
 <strong> Supplementary material:</strong>  Material in <i>italics</i> is meant to reenforce your understanding of the core course material, but you will not need to know the specific definitions/theorems/examples for the exams. 
@@ -281,7 +282,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 
 <h3>Reading:</h3>
 <ul>
-<li><strong><a href = "https://users.aalto.fi/~ave/ROS.pdf">Regression and Other stories </a></strong>
+<li><strong>ROS:</strong>
   <ul>
   <li>Ch. 10: Ignore the r code and skip 10.5,10.8 and 10.9  </li>
   </ul>
