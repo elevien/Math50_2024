@@ -17,7 +17,7 @@ This schedule is subject to changes throughout the course at my discretion. Read
 <strong> Regarding my notes:</strong> My course notes are meant as a supplement to the textbook readings and other resources. They are not a self-contained reference for the course material and will inevitably contain some mistakes. I recommend using the notes to get an idea of what concepts/examples are emphasized and then reviewing this material in the textbook. 
 
 
-Please see canvas for section specific updates and assignment due dates. This schedule will be updated throughout the term. While I will attempt to stay a few weeks ahead in terms of planning the readings, readings will be finalized roughly one week before the material is covered. Class 
+Please see canvas for section specific updates and assignment due dates. This schedule will be updated throughout the term. While I will attempt to stay a few weeks ahead in terms of planning the readings, readings will be finalized roughly one week before the material is covered. 
 
 
 <!-- ################################################################################################################ -->
