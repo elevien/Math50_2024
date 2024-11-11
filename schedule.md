@@ -136,13 +136,13 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 3: Linear Regression Basics (Single Predictor)</summary>
+<summary>Week 3: Single predictors LR I </summary>
 
 <h3>Topics:</h3>
 <ul>
   <li>Properties of Normal random variables (Monday)</li>
   <li>Single-predictor regression as conditional model (Monday)</li>
-  <li>Correlation coefficients, R-squared, autogregressive models (Wednesday)</li>
+  <li>Correlation coefficients, R-squared, <s>regression to the mean</s> (Wednesday)</li>
   <li>Least squares (Wednesday)</li>
   <li><strong>Computation:</strong> Simulating regression models and working with tabular data (Dataframes) (Friday)</li>
 </ul>
@@ -187,18 +187,18 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 4: Statistical Inference</summary>
+<summary>Week 4: Single predictors LR II  </summary>
 
 <h3>Topics:</h3>
 <ul>
   <li> <strong>Computation:</strong> Finish regression examples in python, coefficient of determination </li> 
-  <li> More on coefficient of determination, estimators, standard error, bias and consistency (Wednesday/Friday)</li>
-  <li> <strong>Computation:</strong> regression with <code>statsmodels</code>, visualizing confidence intervals in regression, basic hypothesis testing (Friday) </li>
+  <li> More on coefficient of determination, estimators, standard error (Wednesday/Friday)</li>
+  <li> <strong>Computation:</strong> regression with <code>statsmodels</code>, visualizing confidence intervals in regression (Friday) </li>
 </ul>
 
 <h3>Reading:</h3>
 <ul>
-<li><strong><a href = "https://users.aalto.fi/~ave/ROS.pdf">Regression and Other stories </a></strong>
+<li><strong>ROS</strong>
   <ul>
   <li>Chapter 4: Read the entire chapter (it's not too technical), but 4.2 and 4.4 are especially important. </li>
   </ul>
@@ -243,7 +243,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 5: p-values for regression and hypothesis testing <strong>MIDTERM (Oct 16) </strong></summary>
+<summary>Week 5: Hypothesis testing for regression models <strong>MIDTERM (Oct 16) </strong></summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -270,13 +270,13 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 6: Multiple Predictors  </summary>
+<summary>Week 6: Multiple predictors LR I </summary>
 
 <h3>Topics:</h3>
 <ul>
   <li> No class monday</li>
-  <li> Introduction to regression with multiple predictors (Wednesday)</li>
-  <li> Interpreting regression coefficients (Wednesday) </li>
+  <li> Effects of adding predictors to regression models (Wednesday)</li>
+  <li> Interpreting regression coefficients and model building considerations (Wednesday) </li>
   <li> <strong>Computation:</strong>  Examples in python (Wednesday) </li>
 </ul>
 
@@ -315,7 +315,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 7: More with multiple predictors </summary>
+<summary>Week 7: Multiple predictors LR II </summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -351,7 +351,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 8: Model assessment and beyond linear regression</summary>
+<summary>Week 8: Model assessment and nonlinear models </summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -388,7 +388,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 9/10: Bayesian Inference and MCMC</summary>
+<summary>Week 9/10: Fourier models, Bayesian Inference, other topics</summary>
 
 <h3>Topics:</h3>
 <ul>
