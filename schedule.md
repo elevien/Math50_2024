@@ -136,7 +136,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 3: Single predictors LR I </summary>
+<summary>Week 3: Working with Normal RVs, Least squares LR </summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -187,7 +187,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 4: Single predictors LR II  </summary>
+<summary>Week 4: Other aspects of single predictor LR  </summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -243,7 +243,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 5: Hypothesis testing for regression models <strong>MIDTERM (Oct 16) </strong></summary>
+<summary>Week 5: Hypothesis testing for LR <strong>MIDTERM (Oct 16) </strong></summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -270,7 +270,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 6: Multiple predictors LR I </summary>
+<summary>Week 6: Multiple predictor LR I </summary>
 
 <h3>Topics:</h3>
 <ul>
@@ -315,7 +315,7 @@ Please see canvas for section specific updates and assignment due dates. This sc
 <!-- ################################################################################################################ -->
 <!-- ################################################################################################################ -->
 <details>
-<summary>Week 7: Multiple predictors LR II </summary>
+<summary>Week 7: Multiple predictor LR II </summary>
 
 <h3>Topics:</h3>
 <ul>
